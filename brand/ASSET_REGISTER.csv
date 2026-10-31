@@ -7,7 +7,7 @@ AMA-0005,brand/ASSET_AUDIT.md,0.1.0,in_review,,,,Internal design review; see PAC
 AMA-0006,brand/POSITIONING.md,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
 AMA-0007,brand/source-inventory.csv,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
 AMA-0008,guidelines/USAGE_AND_RIGHTS.md,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
-AMA-0009,handoffs/CLAUDE_DESIGN_HANDOFF.md,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0009,handoffs/CLAUDE_DESIGN_HANDOFF.md,0.1.1,in_review,,,,Internal design review; see PACKAGE_NOTES.md
 AMA-0010,logos/approved/ama-badge.png,0.1.0,approved,Founder (inherited documentary evidence),,logos/sources/supplied-package/02-Logo-Masters/README.md; VECTOR-STATUS.md,Light-ground reference at native resolution
 AMA-0011,logos/approved/ama-lockup-horizontal.png,0.1.0,approved,Founder (inherited documentary evidence),,logos/sources/supplied-package/02-Logo-Masters/README.md; VECTOR-STATUS.md,Light-ground reference at native resolution
 AMA-0012,logos/approved/ama-monogram.png,0.1.0,approved,Founder (inherited documentary evidence),,logos/sources/supplied-package/02-Logo-Masters/README.md; VECTOR-STATUS.md,Light-ground reference at native resolution
@@ -115,9 +115,11 @@ AMA-0113,brand/FOUNDATION.md,0.1.0,in_review,,,,Review documentation or static d
 AMA-0114,brand/VERIFICATION.md,0.1.0,in_review,,,,Review documentation or static design shell
 AMA-0115,guidelines/APPROVAL.md,0.1.0,in_review,,,,Review documentation or static design shell
 AMA-0116,handoffs/AMA_BRAND_PACKAGE_BRIEF.md,0.1.0,in_review,,,,Review documentation or static design shell
-AMA-0117,handoffs/CLAUDE_DESIGN.md,0.1.0,in_review,,,,Review documentation or static design shell
+AMA-0117,handoffs/CLAUDE_DESIGN.md,0.1.1,in_review,,,,Review documentation or static design shell
 AMA-0118,handoffs/IMPORT_INSTRUCTIONS.md,0.1.0,in_review,,,,Review documentation or static design shell
 AMA-0119,logos/README.md,0.1.0,in_review,,,,Review documentation or static design shell
 AMA-0120,logos/working/verify_package.py,0.1.0,in_review,,,,Review documentation or static design shell
 AMA-0121,templates/README.md,0.1.0,in_review,,,,Review documentation or static design shell
 AMA-0122,tokens/README.md,0.1.0,in_review,,,,Review documentation or static design shell
+AMA-0123,handoffs/STRATEGY_UPDATE_2026-10-31.md,0.1.1,in_review,,,,Strategy alignment and Yawdie assessment; not approval or runtime execution
+AMA-0124,handoffs/YAWDIE_HANDOFF_2026-10-31.md,0.1.1,in_review,,,,Strategy alignment and Yawdie assessment; not approval or runtime execution
