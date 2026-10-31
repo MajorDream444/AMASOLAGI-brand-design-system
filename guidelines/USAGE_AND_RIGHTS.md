@@ -1,0 +1,8 @@
+# Usage and release rules
+Use approved raster references exactly on matching light grounds. Never recolor, distort, add a ring or remove nodes. New transparent cuts remain in_review. Use review composites only for internal evaluation. Proposed clear space: at least 1/4 badge diameter; proposed digital minimum: badge 64px, monogram 96px wide, horizontal lockup 320px wide; these are evaluation starting points, not approved standards. Actual detail and phone tests control final acceptance.
+
+The dark version is a transparent artwork placed on obsidian; the wordmark remains dark and therefore is not a dark-background logo. Never invert it automatically. Single-color and stacked variants require clean geometry and founder review. SVG with an image element is raster-backed, regardless of extension. Outlined distribution copies await a verified editable vector/type source and rights clearance.
+
+Digital: WCAG AA normal text 4.5:1, large text 3:1; UI boundaries 3:1 where required. Never use small muted gold or gray text without testing the exact background. Every status uses a written label and icon. Focus must remain visible; forms need labels, error summaries and keyboard access. PDF is a visual review proof, not tagged accessible publication.
+
+Print: no CMYK, Pantone, foil, embroidery or pin specification is approved. Vendor proof and physical sample required. No font files are redistributed. The supplied brand-book describes OFL families but contains no license texts; obtain each actual font version and its license from its publisher before packaging. Logo, generated imagery, stock and photo rights remain unverified. No rights license is granted by this package.

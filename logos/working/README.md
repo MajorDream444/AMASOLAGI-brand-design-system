@@ -1,0 +1,2 @@
+# Working logo compositions
+SVG files here deliberately embed the review PNG as an image element. They are editable layout containers, not vector masters or outlined lettering. No automatic tracing performed: detailed metallic gradients, tiny nodes and unknown lettering would create misleading path geometry. Designer should redraw from the approved source at native scale, check overlays, preserve node count/rhythm and submit a path-only distribution copy. Any newly proposed flat treatment requires founder sign-off.

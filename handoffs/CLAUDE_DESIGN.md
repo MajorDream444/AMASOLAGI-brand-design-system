@@ -11,3 +11,6 @@ Define logo usage; typography; colors and accessible combinations; spacing and g
 Demonstrate one product catalogue section, one consulting proposal page, and one client workspace overview. Use fictional client data. Keep changing prices, dates, product availability, and campaign copy editable. New layouts and specifications remain proposals until reviewed.
 
 Return editable outputs, export specifications, unresolved decisions, and implementation instructions. Approved changes return to GitHub through a pull request. Do not assume Claude Design automatically synchronizes to the repository.
+
+## Audited inputs
+Continue with [Detailed handoff](CLAUDE_DESIGN_HANDOFF.md), [Asset audit](../brand/ASSET_AUDIT.md) and [Package notes](../PACKAGE_NOTES.md). New derivatives remain in_review.

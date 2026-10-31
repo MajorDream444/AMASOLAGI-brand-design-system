@@ -27,3 +27,6 @@ Audit source ZIP → prepare review assets → founder selection → record appr
 Use pull requests for subsequent changes. Major Dream Williams approves identity changes. Keep application code in the existing amasolagi-site repository. Use a release or immutable commit in team handoffs; changes in Claude Design do not automatically sync to GitHub.
 
 Assets remain proprietary unless explicitly licensed otherwise. Preserve third-party license terms. Do not commit credentials or client information.
+
+## Audit package v0.1.0
+Source ZIP imported on review branch. Read [Package notes](PACKAGE_NOTES.md), [Audit](brand/ASSET_AUDIT.md), [comparison PDF](brand/AMA_Comparison_v001_REVIEW.pdf) and [detailed handoff](handoffs/CLAUDE_DESIGN_HANDOFF.md). Source notes document three inherited raster approvals with unknown approval dates. New assets remain in_review; final colors/fonts and vector masters remain pending. Earlier foundation statements about missing inputs describe the pre-import state.
