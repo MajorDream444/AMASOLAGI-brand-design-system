@@ -11,3 +11,9 @@ Define logo usage; typography; colors and accessible combinations; spacing and g
 Demonstrate one product catalogue section, one consulting proposal page, and one client workspace overview. Use fictional client data. Keep changing prices, dates, product availability, and campaign copy editable. New layouts and specifications remain proposals until reviewed.
 
 Return editable outputs, export specifications, unresolved decisions, and implementation instructions. Approved changes return to GitHub through a pull request. Do not assume Claude Design automatically synchronizes to the repository.
+
+## Audited inputs
+Continue with [Detailed handoff](CLAUDE_DESIGN_HANDOFF.md), [Asset audit](../brand/ASSET_AUDIT.md) and [Package notes](../PACKAGE_NOTES.md). New derivatives remain in_review.
+
+## October 31 strategy update
+Apply [Strategy update](STRATEGY_UPDATE_2026-10-31.md) to the front door, proposed Art Mob team, commercial clarity and client workspace. Preserve existing identity approvals. See [Yawdie handoff](YAWDIE_HANDOFF_2026-10-31.md) for execution priorities; it is not evidence of local job submission.

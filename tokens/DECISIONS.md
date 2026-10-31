@@ -1,0 +1,2 @@
+# Token decisions
+Supplied JSON/CSS are preserved unchanged, including their provisional flags. Website provenance is claimed by the supplied package, not independently compared to live code. Proposed 8px spacing scale: 8/16/24/32/48/80; 1200px content maximum; 24px gutters; 32px cards; 8px utility corners. Reuse website geometry for website examples; review document typography separately. Proposed mobile breakpoint 720px and 44px minimum control height. No new colors are approved. Resolve typography contradictions in ASSET_AUDIT before generating final document styles.

@@ -1,0 +1,171 @@
+{
+ "v": 3,
+ "assetGroups": {
+  "Imagery": {
+   "files": {
+    "ama-solutions-hamal-campus-concept.webp": {
+     "blob": "663ed4dadf328b7b97d0e21225a86104",
+     "name": "ama-solutions-hamal-campus-concept.webp",
+     "size": 457710,
+     "type": "image/webp"
+    },
+    "artisans.webp": {
+     "blob": "451617f8bf80c753e404f78837873ee6",
+     "name": "artisans.webp",
+     "size": 183676,
+     "type": "image/webp"
+    },
+    "avant-garde.webp": {
+     "blob": "e313bb830af1065932932d6806c7b72d",
+     "name": "avant-garde.webp",
+     "size": 245218,
+     "type": "image/webp"
+    },
+    "dreamweavers.webp": {
+     "blob": "06aab18c0caf1497beed18a273229ccf",
+     "name": "dreamweavers.webp",
+     "size": 243220,
+     "type": "image/webp"
+    },
+    "guardians.webp": {
+     "blob": "9476041913bdeb7ff9ec0953b639045e",
+     "name": "guardians.webp",
+     "size": 134298,
+     "type": "image/webp"
+    },
+    "innovators.webp": {
+     "blob": "ad73c0f9b321572aa38c14809f9c729a",
+     "name": "innovators.webp",
+     "size": 186864,
+     "type": "image/webp"
+    },
+    "luminaries.webp": {
+     "blob": "b73e154159d421865edbeaccce1669bb",
+     "name": "luminaries.webp",
+     "size": 174538,
+     "type": "image/webp"
+    },
+    "maestros.webp": {
+     "blob": "4929b798a5c69d81094f360e0520153d",
+     "name": "maestros.webp",
+     "size": 164942,
+     "type": "image/webp"
+    },
+    "provocateurs.webp": {
+     "blob": "228c13b988ff099dcdbc644210a40e29",
+     "name": "provocateurs.webp",
+     "size": 214398,
+     "type": "image/webp"
+    },
+    "revolutionaries.webp": {
+     "blob": "c968bd1d6d8a526daaab56617c2476bc",
+     "name": "revolutionaries.webp",
+     "size": 190204,
+     "type": "image/webp"
+    },
+    "strategists.webp": {
+     "blob": "9a8e318cdfe52874bd05584d0982f23d",
+     "name": "strategists.webp",
+     "size": 172238,
+     "type": "image/webp"
+    },
+    "vanguards.webp": {
+     "blob": "9109f12d3d72a6fdf1f80717133e4903",
+     "name": "vanguards.webp",
+     "size": 147074,
+     "type": "image/webp"
+    },
+    "visionaries.webp": {
+     "blob": "10313ec0cfa62e35dbd3c12c69ae7af7",
+     "name": "visionaries.webp",
+     "size": 191064,
+     "type": "image/webp"
+    }
+   },
+   "name": "Imagery",
+   "order": [
+    "ama-solutions-hamal-campus-concept.webp",
+    "visionaries.webp",
+    "strategists.webp",
+    "innovators.webp",
+    "artisans.webp",
+    "maestros.webp",
+    "guardians.webp",
+    "luminaries.webp",
+    "provocateurs.webp",
+    "revolutionaries.webp",
+    "vanguards.webp",
+    "avant-garde.webp",
+    "dreamweavers.webp"
+   ],
+   "tile": "l"
+  },
+  "Logos": {
+   "files": {
+    "ama-glyph.svg": {
+     "blob": "f6807b4ef3719f914e09569f6475e2ab",
+     "name": "ama-glyph.svg",
+     "size": 151,
+     "type": "image/svg+xml"
+    },
+    "ama-mark.svg": {
+     "blob": "4a813a6fafb8412c03cd2a7ce7d8573c",
+     "name": "ama-mark.svg",
+     "size": 243,
+     "type": "image/svg+xml"
+    },
+    "ama-badge.png": {
+     "name": "ama-badge.png",
+     "blob": "aa58c3dd919ee3075864e6152ac0f3db",
+     "size": 880452,
+     "type": "image/png"
+    },
+    "ama-monogram.png": {
+     "name": "ama-monogram.png",
+     "blob": "87356dab0cd0907ff05dd59140464732",
+     "size": 551209,
+     "type": "image/png"
+    },
+    "ama-lockup-horizontal.png": {
+     "name": "ama-lockup-horizontal.png",
+     "blob": "ab03f3f665b5b897c4b809a139b5fb67",
+     "size": 313348,
+     "type": "image/png"
+    }
+   },
+   "name": "Logos",
+   "order": [
+    "ama-badge.png",
+    "ama-monogram.png",
+    "ama-lockup-horizontal.png",
+    "ama-mark.svg",
+    "ama-glyph.svg"
+   ],
+   "tile": "l"
+  }
+ },
+ "blobs": {},
+ "createdOnFiles": {
+  "at": "2026-10-29T06:50:00Z",
+  "v": 1
+ },
+ "docs": {
+  "readme": "project/README.md",
+  "sections": []
+ },
+ "groups": [
+  "Logos",
+  "Imagery"
+ ],
+ "lastChange": {
+  "by": "Major Dream Williams",
+  "at": "2026-10-29T08:40:00Z",
+  "via": "Claude \u00b7 founder-supplied logo files",
+  "note": "Added the approved AMA badge (master), standalone monogram and horizontal lockup; interim site mark demoted."
+ },
+ "layout": "files",
+ "libraries": [],
+ "namespace": "AMA",
+ "sections": {},
+ "title": "AMA Solutions"
+}

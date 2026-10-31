@@ -1,0 +1,39 @@
+<!-- @dsCard height=288 -->
+<style>
+  html, body { margin: 0; background: var(--bg); }
+  .cv { position: relative; width: 960px; height: 288px; overflow: hidden; background: var(--bg); }
+  .cv svg { position: absolute; left: 0; top: 0; }
+  .b-gold { fill: var(--gold); }
+  .b-light { fill: var(--gold-light); }
+  .b-steel { fill: var(--border-light); }
+  .b-dim { fill: var(--gold-dim); }
+  .dot { fill: var(--bg); }
+  .r { rx: var(--radius-card); }
+  .cv-text { position: absolute; left: 40px; top: 152px; max-width: 880px; }
+  .cv-name { font-family: var(--font-display, 'Inter', sans-serif); font-weight: 500; font-size: 64px; line-height: .95; letter-spacing: -0.02em; color: var(--text); margin: 0; white-space: nowrap; }
+  .cv-tag { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 13px; line-height: 1.5; color: var(--text-secondary); margin: 16px 0 0; }
+</style>
+<div class="cv">
+  <!--
+    blocks: gold 420×144, gold-light 120×144, border-light 256×144, gold-dim 140×144 — corners radius-card (32px), gaps spacing-gap (16px)
+    arrangement: top-band skeleton (name too wide for the 440px zone at 64px); a strip of unequal bands bleeding off the top and right edge
+    pattern: precise/technical row — the site is mono-led "platform architecture" on an 8px base, so a dot grid at spacing-card (24px) pitch cut out of the steel block
+    steps/radii: spacing-gap 16, spacing-card 24, radius-card 32
+  -->
+  <svg width="960" height="288" viewBox="0 0 960 288" aria-hidden="true">
+    <rect class="b-gold r" x="-32" y="-32" width="452" height="144" rx="32"/>
+    <rect class="b-light r" x="436" y="-32" width="120" height="144" rx="32"/>
+    <rect class="b-steel r" x="572" y="-32" width="256" height="144" rx="32"/>
+    <rect class="b-dim r" x="844" y="-32" width="148" height="144" rx="32"/>
+    <g>
+      <circle class="dot" cx="604" cy="16" r="2"/><circle class="dot" cx="628" cy="16" r="2"/><circle class="dot" cx="652" cy="16" r="2"/><circle class="dot" cx="676" cy="16" r="2"/><circle class="dot" cx="700" cy="16" r="2"/><circle class="dot" cx="724" cy="16" r="2"/><circle class="dot" cx="748" cy="16" r="2"/><circle class="dot" cx="772" cy="16" r="2"/><circle class="dot" cx="796" cy="16" r="2"/>
+      <circle class="dot" cx="604" cy="40" r="2"/><circle class="dot" cx="628" cy="40" r="2"/><circle class="dot" cx="652" cy="40" r="2"/><circle class="dot" cx="676" cy="40" r="2"/><circle class="dot" cx="700" cy="40" r="2"/><circle class="dot" cx="724" cy="40" r="2"/><circle class="dot" cx="748" cy="40" r="2"/><circle class="dot" cx="772" cy="40" r="2"/><circle class="dot" cx="796" cy="40" r="2"/>
+      <circle class="dot" cx="604" cy="64" r="2"/><circle class="dot" cx="628" cy="64" r="2"/><circle class="dot" cx="652" cy="64" r="2"/><circle class="dot" cx="676" cy="64" r="2"/><circle class="dot" cx="700" cy="64" r="2"/><circle class="dot" cx="724" cy="64" r="2"/><circle class="dot" cx="748" cy="64" r="2"/><circle class="dot" cx="772" cy="64" r="2"/><circle class="dot" cx="796" cy="64" r="2"/>
+      <circle class="dot" cx="604" cy="88" r="2"/><circle class="dot" cx="628" cy="88" r="2"/><circle class="dot" cx="652" cy="88" r="2"/><circle class="dot" cx="676" cy="88" r="2"/><circle class="dot" cx="700" cy="88" r="2"/><circle class="dot" cx="724" cy="88" r="2"/><circle class="dot" cx="748" cy="88" r="2"/><circle class="dot" cx="772" cy="88" r="2"/><circle class="dot" cx="796" cy="88" r="2"/>
+    </g>
+  </svg>
+  <div class="cv-text">
+    <p class="cv-name">AMA Solutions</p>
+    <p class="cv-tag">Human-led, AI-enabled strategic services.</p>
+  </div>
+</div>

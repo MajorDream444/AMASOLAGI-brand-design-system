@@ -1,0 +1,19 @@
+# AMA asset audit - 31 October 2026
+
+## Usable now
+Three raster references have documentary approval evidence in supplied `02-Logo-Masters/README.md` and `VECTOR-STATUS.md`, supported by the brand book and governance. This is inherited documentary evidence, not an independently retrieved founder sign-off. Approval dates are unknown. Copies in `logos/approved/` are byte-identical. All have RGB pixels and no alpha: badge 1024x1024, monogram 788x580, horizontal lockup 1024x1024. Use on matching light grounds within native pixel resolution. The horizontal file's large canvas margins make it unsuitable for direct nav use.
+
+## Inventory and sources
+`source-inventory.csv` enumerates every supplied file, SHA-256, exact duplicates, image dimensions/mode and SVG structure. The original ZIP and complete expanded tree are untouched in sources. No AI, EPS, PSD, editable type master, font binary or font license file was supplied. Markdown, JSON, CSS and static HTML are editable design-system sources, not editable logo geometry. Founder originals include JPEG alternatives and a combined badge/wordmark image; none is promoted on filename alone. The approved badge duplicates cream-b; horizontal duplicates square-b. Repeated token, governance, component and brand-book copies have hash relationships in the inventory. Some corresponding HTML previews differ, so neither is silently declared authoritative.
+
+## Vectors and production limits
+The two supplied SVGs use genuine SVG geometry, no embedded raster and no live text. They depict only the deprecated interim triangle identity, not the badge. Generated SVG compositions contain embedded PNG images, no traced logo paths and no text. They support placement editing only. No outlined wordmark or true vector master is claimed. Clean redraw is required for the sculptural triangle intersections, even node rhythm, badge rims and wordmark lettering. Do not automatically simplify nodes or guess a replacement font. Flat, single-color, stacked, independent wordmark and dark-wordmark arrangements are held for designer review; no new identity geometry is fabricated.
+
+## Tokens and conflicts
+Website values supplied: bg #080808; gold #C9A227; white #FFFFFF; surface #151515. Supplied brand palette (#0A0A0A, #F5F2EA, #D6AD62, #9B6B22 etc.) is explicitly provisional, as are functional status colors. Preserve both layers. Font declarations conflict: brand-book proposes Source Serif 4 for document headings but CSS doc-title/doc-h1 select IBM Plex Sans. Brand-book assigns mono to document labels/tables while CSS selects sans. Neither is resolved as approved. Inter and JetBrains Mono are website declarations; Source Serif 4 and IBM Plex Sans are proposed document families. Public/legal names and website are now confirmed by this task, superseding the old 'suffix unconfirmed' note.
+
+## Derivatives
+Review PNGs use conservative edge-connected removal of bright neutral background pixels; original RGB artwork remains. This is a hard alpha mask, not a manual retouch: cream fringe and shadows remain and fine edge highlights may be affected. Horizontal lockup may retain a cream rectangle around the badge because it is composited inside a white canvas. Review dark-background tests before use. No enlargement beyond source detail; exports resample downward. Favicon samples demonstrate detail loss and are not deployment-approved. Badge rim/node detail merges at 16-32px. Use clean flat master only after approval.
+
+## Rights
+No logo ownership assignment, source-art provenance, font license texts, model releases or imagery licenses supplied. Brand-book's font-license assertions are unverified. Outlining does not grant rights. Do not distribute font binaries or claim print/merchandise clearance. Original sources retained for rights review.
