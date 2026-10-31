@@ -21,3 +21,6 @@ Presentations: 16:9 cover, agenda, problem, process, evidence, scope, timeline a
 
 ## Decisions awaiting founder
 Exact flat vector geometry and wordmark; final document fonts; approved brand/print colors; dark wordmark; small-mark simplification; min size/clear space; single-color/stacked family; rights evidence; final offer catalogue and prices. Explicitly record approver, date and evidence before moving files to approved.
+
+## Strategy and execution alignment - October 31
+Read [Strategy update](STRATEGY_UPDATE_2026-10-31.md) before extending application designs. Include problem-based intake, understandable team responsibilities, usage controls and support. The cultural expression is a separate review exploration, not a replacement identity. Sheetal's current commitment comes first without an upsell. [Yawdie handoff](YAWDIE_HANDOFF_2026-10-31.md) records assessment tasks and local runtime boundaries.
