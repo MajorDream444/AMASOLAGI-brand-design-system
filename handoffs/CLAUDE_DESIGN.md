@@ -14,3 +14,6 @@ Return editable outputs, export specifications, unresolved decisions, and implem
 
 ## Audited inputs
 Continue with [Detailed handoff](CLAUDE_DESIGN_HANDOFF.md), [Asset audit](../brand/ASSET_AUDIT.md) and [Package notes](../PACKAGE_NOTES.md). New derivatives remain in_review.
+
+## October 31 strategy update
+Apply [Strategy update](STRATEGY_UPDATE_2026-10-31.md) to the front door, proposed Art Mob team, commercial clarity and client workspace. Preserve existing identity approvals. See [Yawdie handoff](YAWDIE_HANDOFF_2026-10-31.md) for execution priorities; it is not evidence of local job submission.
