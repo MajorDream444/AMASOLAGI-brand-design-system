@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>AMA SOL AGI — Front door (in_review)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#080808;color:#FFFFFF;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:#E3BB48;text-underline-offset:3px}
+a:hover{color:#FFFFFF}
+button,input,select,textarea{font:inherit}
+:focus-visible{outline:2px solid #C9A227;outline-offset:3px}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:10;border-bottom:1px solid #27272A;background:rgba(8,8,8,0.94);backdrop-filter:blur(8px)">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <a href="AMA Foundations.dc.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#FFFFFF"><span style="font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:15px;letter-spacing:-0.01em">AMA SOL AGI</span><span style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#A1A1AA">Design system v0.2.0</span></a>
+    <nav aria-label="Design system" style="display:flex;gap:4px;flex-wrap:wrap">
+      <a href="AMA Foundations.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Foundations</a>
+      <a href="AMA Components.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Components</a>
+      <a href="AMA Applications.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Applications</a>
+      <a href="AMA Front Door.dc.html" aria-current="page" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;font-weight:600;color:#E3BB48;text-decoration:none;background:rgba(201,162,39,0.08);border:1px solid rgba(201,162,39,0.2)">Front door</a>
+      <a href="AMA Team and Usage.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Team and usage</a>
+      <a href="AMA Communications.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Communications</a>
+      <a href="AMA Onboarding.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Onboarding</a>
+    </nav>
+    <span style="display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:rgba(201,162,39,0.1);border:1px solid rgba(201,162,39,0.3);color:#E3BB48"><span aria-hidden="true">◐</span>In review</span>
+  </div>
+</header>
+
+<main style="max-width:1200px;margin:0 auto;padding:56px 24px 80px;display:grid;gap:32px">
+  <div style="display:grid;gap:12px;max-width:760px">
+    <p style="margin:0;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C9A227">amasolagi.com · front door · proposal</p>
+    <h1 style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:clamp(36px,5vw,56px);font-weight:500;line-height:1.05;letter-spacing:-0.015em;text-wrap:balance">Tell us what you need help with.</h1>
+    <p style="margin:0;color:#A1A1AA;text-wrap:pretty">Describe it in your own words. Our guide asks two questions, shows you what it understood, and explains which kind of help fits. You can change anything before you choose.</p>
+  </div>
+
+  <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start">
+    <section aria-label="Conversation with the AMA guide" style="flex:2 1 560px;min-width:0;background:#151515;border:1px solid #27272A;border-radius:32px;overflow:hidden;display:flex;flex-direction:column">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 24px;border-bottom:1px solid #27272A;flex-wrap:wrap">
+        <div style="display:flex;gap:10px;align-items:center"><span aria-hidden="true" style="width:32px;height:32px;border-radius:50%;border:1px solid #C9A227;color:#E3BB48;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600">AI</span><div><div style="font-size:13px;font-weight:600">AMA guide</div><div style="font-size:11px;color:#A1A1AA">AI assistant · a person reviews every recommendation</div></div></div>
+        <button type="button" disabled="" aria-describedby="voice-note" style="min-height:40px;padding:8px 16px;border:1px dashed #3F3F46;border-radius:9999px;background:transparent;color:#71717A;font-size:11px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;cursor:not-allowed;display:flex;gap:8px;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="9" y="3" width="6" height="12" rx="3"></rect><path d="M5 11a7 7 0 0014 0M12 18v3"></path></svg>Voice</button>
+      </div>
+      <span id="voice-note" style="padding:8px 24px 0;font-size:11px;color:#A1A1AA">Voice is proposed and not yet available.</span>
+
+      <div aria-live="polite" style="padding:20px 24px;display:grid;gap:14px;min-height:320px;align-content:start">
+        <sc-for list="{{ messages }}" as="m" hint-placeholder-count="1">
+          <div style="{{ m.wrapStyle }}">
+            <span style="font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#A1A1AA">{{ m.who }}</span>
+            <div style="{{ m.bubbleStyle }}">{{ m.text }}</div>
+          </div>
+        </sc-for>
+
+        <sc-if value="{{ showChips }}" hint-placeholder-val="{{ false }}">
+          <div role="group" aria-label="{{ chipsLabel }}" style="display:flex;gap:8px;flex-wrap:wrap">
+            <sc-for list="{{ chips }}" as="c" hint-placeholder-count="3"><button type="button" onClick="{{ c.pick }}" style="min-height:44px;padding:10px 18px;border:1px solid #71717A;border-radius:9999px;background:transparent;color:#FFFFFF;font-size:13px;cursor:pointer" style-hover="border-color:#C9A227;color:#E3BB48">{{ c.label }}</button></sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showSummary }}" hint-placeholder-val="{{ false }}">
+          <form onSubmit="{{ confirmSummary }}" aria-labelledby="sum-h" style="border:1px solid #3F3F46;border-radius:16px;padding:20px;display:grid;gap:14px;background:#080808">
+            <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><h2 id="sum-h" style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:500">What I understood</h2><span style="font-size:11px;color:#A1A1AA">Edit anything that's wrong</span></div>
+            <div style="display:grid;gap:6px"><label for="s-need" style="font-size:12px;font-weight:600">The problem</label><textarea id="s-need" rows="2" value="{{ need }}" onChange="{{ setNeed }}" style="padding:10px 14px;background:#151515;color:#FFFFFF;border:1px solid #71717A;border-radius:8px;resize:vertical;font-size:13px"></textarea></div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
+              <div style="display:grid;gap:6px"><label for="s-freq" style="font-size:12px;font-weight:600">How often</label><select id="s-freq" value="{{ freq }}" onChange="{{ setFreq }}" style="min-height:44px;padding:8px 12px;background:#151515;color:#FFFFFF;border:1px solid #71717A;border-radius:8px;font-size:13px"><option>Daily</option><option>Weekly</option><option>Occasionally</option></select></div>
+              <div style="display:grid;gap:6px"><label for="s-pref" style="font-size:12px;font-weight:600">Help you want</label><select id="s-pref" value="{{ pref }}" onChange="{{ setPref }}" style="min-height:44px;padding:8px 12px;background:#151515;color:#FFFFFF;border:1px solid #71717A;border-radius:8px;font-size:13px"><option>Tools I can use myself</option><option>Advice on what to do</option><option>Someone to build it with me</option><option>Not sure yet</option></select></div>
+            </div>
+            <div style="display:grid;gap:6px"><label for="s-who" style="font-size:12px;font-weight:600">Who it affects <span style="font-weight:400;color:#A1A1AA">(optional)</span></label><input id="s-who" type="text" value="{{ who }}" onChange="{{ setWho }}" placeholder="e.g. front desk, two clinicians" style="min-height:44px;padding:10px 14px;background:#151515;color:#FFFFFF;border:1px solid #71717A;border-radius:8px;font-size:13px"></div>
+            <button type="submit" style="justify-self:start;min-height:44px;padding:12px 24px;border:0;border-radius:9999px;background:#C9A227;color:#080808;font-size:13px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;cursor:pointer" style-hover="background:#E3BB48">Show recommendation</button>
+          </form>
+        </sc-if>
+
+        <sc-if value="{{ showRec }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;gap:12px">
+            <article aria-labelledby="rec-h" style="border:2px solid #C9A227;border-radius:16px;padding:20px;display:grid;gap:12px;background:#080808">
+              <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><span style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C9A227">Recommended · {{ rec.route }}</span><span style="font-size:11px;color:#A1A1AA">▲ Availability to confirm</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap"><h2 id="rec-h" style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:24px;font-weight:500">{{ rec.name }}</h2><span style="font-family:Inter,system-ui,sans-serif;font-size:20px;font-weight:500">{{ rec.price }}</span></div>
+              <p style="margin:0;font-size:13px;color:#A1A1AA">{{ rec.desc }}</p>
+              <div><p style="margin:0 0 6px;font-size:12px;font-weight:600">Why this fits</p><ul style="margin:0;padding-left:18px;font-size:13px;color:#A1A1AA;display:grid;gap:4px"><sc-for list="{{ why }}" as="w" hint-placeholder-count="3"><li>{{ w }}</li></sc-for></ul></div>
+              <p style="margin:0;padding:10px 12px;border-radius:8px;background:#151515;font-size:12px;color:#A1A1AA"><span style="color:#FFFFFF">What happens next:</span> {{ rec.next }}</p>
+              <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="AMA Applications.dc.html" style="min-height:44px;padding:12px 24px;border-radius:9999px;background:#C9A227;color:#080808;font-size:13px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center">{{ rec.cta }}</a><button type="button" onClick="{{ editSummary }}" style="min-height:44px;padding:11px 23px;border:1px solid #71717A;border-radius:9999px;background:transparent;color:#FFFFFF;font-size:13px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;cursor:pointer">Edit my answers</button></div>
+            </article>
+            <div style="display:grid;gap:8px">
+              <p style="margin:0;font-size:12px;color:#A1A1AA">Other routes you can choose instead</p>
+              <sc-for list="{{ others }}" as="o" hint-placeholder-count="2">
+                <a href="AMA Applications.dc.html" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:14px 16px;border:1px solid #27272A;border-radius:16px;color:#FFFFFF;text-decoration:none;font-size:13px" style-hover="border-color:#8A6D1A"><span><span style="display:block;font-size:11px;color:#C9A227;letter-spacing:0.08em;text-transform:uppercase">{{ o.route }}</span>{{ o.name }}<span style="display:block;font-size:12px;color:#A1A1AA">{{ o.when }}</span></span><span style="color:#A1A1AA">{{ o.price }}</span></a>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+
+      <sc-if value="{{ showInput }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ sendNeed }}" style="border-top:1px solid #27272A;padding:16px 24px;display:grid;gap:10px">
+          <label for="need-in" style="font-size:12px;font-weight:600">What do you need help with?</label>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <textarea id="need-in" rows="2" value="{{ draft }}" onChange="{{ setDraft }}" placeholder="e.g. New clients email, call and fill in a form, and we re-type everything three times." style="flex:1 1 280px;padding:10px 14px;background:#080808;color:#FFFFFF;border:1px solid #71717A;border-radius:16px;resize:vertical;font-size:13px"></textarea>
+            <button type="submit" disabled="{{ draftEmpty }}" style="{{ sendStyle }}">Send</button>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><span style="font-size:11px;color:#A1A1AA">Try:</span><sc-for list="{{ examples }}" as="e" hint-placeholder-count="2"><button type="button" onClick="{{ e.use }}" style="min-height:36px;padding:6px 12px;border:1px solid #27272A;border-radius:9999px;background:transparent;color:#A1A1AA;font-size:11px;cursor:pointer" style-hover="color:#FFFFFF;border-color:#3F3F46">{{ e.label }}</button></sc-for></div>
+          <p style="margin:0;font-size:11px;color:#A1A1AA">Demo: nothing you type is sent or stored. In production, AMA keeps the conversation only to prepare your recommendation. See the <a href="https://amasolagi.com/privacy">privacy notice</a> (review draft).</p>
+        </form>
+      </sc-if>
+      <sc-if value="{{ showRestart }}" hint-placeholder-val="{{ false }}">
+        <div style="border-top:1px solid #27272A;padding:12px 24px"><button type="button" onClick="{{ restart }}" style="min-height:44px;padding:10px 4px;border:0;background:transparent;color:#E3BB48;font-size:12px;font-weight:600;text-decoration:underline;text-underline-offset:4px;cursor:pointer">Start over</button></div>
+      </sc-if>
+    </section>
+
+    <aside style="flex:1 1 300px;min-width:0;display:grid;gap:16px">
+      <div style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px;display:grid;gap:10px">
+        <h2 style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:500">Prefer not to chat?</h2>
+        <a href="AMA Applications.dc.html" style="min-height:44px;padding:11px 20px;border-radius:9999px;border:1px solid #71717A;color:#FFFFFF;font-size:12px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;justify-content:center">Browse all offers</a>
+        <a href="AMA Components.dc.html" style="min-height:44px;padding:11px 20px;border-radius:9999px;border:1px solid #71717A;color:#FFFFFF;font-size:12px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;justify-content:center">Write to a person</a>
+        <p style="margin:0;font-size:12px;color:#A1A1AA">Email <a href="mailto:info@amasolagi.com">info@amasolagi.com</a> or see <a href="https://amasolagi.com/support">support</a>. A named person replies within [confirm] working days.</p>
+      </div>
+      <div style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px;display:grid;gap:12px">
+        <h2 style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:500">Three ways we help</h2>
+        <dl style="margin:0;display:grid;gap:12px;font-size:12px">
+          <div><dt style="font-weight:600;color:#FFFFFF">Resources</dt><dd style="margin:0;color:#A1A1AA">One-time services and kits you can use yourself. From $250.</dd></div>
+          <div><dt style="font-weight:600;color:#FFFFFF">Consultation</dt><dd style="margin:0;color:#A1A1AA">A session with Major on one decision. $350 for 60 minutes.</dd></div>
+          <div><dt style="font-weight:600;color:#FFFFFF">Implementation</dt><dd style="margin:0;color:#A1A1AA">We build it with you. Quoted after analysis, under a separate proposal.</dd></div>
+        </dl>
+      </div>
+      <div style="border:1px dashed #3F3F46;border-radius:32px;padding:24px;font-size:12px;color:#A1A1AA;display:grid;gap:6px">
+        <span style="font-weight:600;color:#FFFFFF">Rules for the guide</span>
+        <span>Always says it's AI. Never quotes a price outside the catalogue. Never books, charges or promises results. Any recommendation can be changed or ignored.</span>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer style="border-top:1px solid #27272A">
+  <div style="max-width:1200px;margin:0 auto;padding:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:#A1A1AA"><span>AMA Solutions Corporation (legal name to verify) · amasolagi.com</span><span>Proposal from the 31 Oct 2026 strategy update. Scripted demo; voice and routing are not implemented.</span></div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const ROUTES = {
+  self: { route: 'Resource', name: 'Make It Make Sense Kit', price: '$495', desc: 'An explainer video (4–7 min target), a ten-question FAQ and a one-page plain-language explanation, made from up to 5 of your sources.', next: 'Send up to 5 sources and your main message. Delivery within 3 business days after payment and complete inputs. No call needed.', cta: 'See the kit', when: 'If you want to work through it yourself.' },
+  advice: { route: 'Consultation', name: 'AI Choice Session', price: '$350', desc: 'Sixty minutes with Major on one business question, with preparation and a one-page next-step note.', next: 'Choose a time, pay, then send a short brief. The session is confirmed when payment clears.', cta: 'Choose a session time', when: 'If you want a second mind on one decision.' },
+  build: { route: 'Implementation', name: 'Map Poke Scale Pressure-Proof Workshop', price: '$1,250', desc: 'Ninety minutes on one workflow: a decision map, an assumptions register and a staged pilot plan. Building it is quoted separately afterwards.', next: 'Workshop first. If you want us to build it, we send a separate proposal with scope, owners and price.', cta: 'Start with the workshop', when: 'If you want us to build it with you.' }
+};
+const PREF = { 'Tools I can use myself': 'self', 'Advice on what to do': 'advice', 'Someone to build it with me': 'build', 'Not sure yet': 'advice' };
+const INTRO = "Hi. I'm the AMA guide, an AI assistant, not a person. Tell me what you need help with in your own words. A person at AMA reviews every recommendation before any work starts.";
+class Component extends DCLogic {
+  state = { step: 0, draft: '', need: '', freq: 'Weekly', pref: 'Advice on what to do', who: '', msgs: [{ r: 'g', t: INTRO }] };
+  say(r, t, extra) { this.setState(s => ({ msgs: [...s.msgs, { r, t }], ...extra })); }
+  renderVals() {
+    const s = this.state;
+    const bubble = r => r === 'u'
+      ? { padding: '12px 16px', borderRadius: '16px 16px 4px 16px', background: '#242424', fontSize: 14, maxWidth: 520 }
+      : { padding: '12px 16px', borderRadius: '16px 16px 16px 4px', border: '1px solid #3F3F46', fontSize: 14, maxWidth: 560 };
+    const messages = s.msgs.map(m => ({ who: m.r === 'u' ? 'You' : 'AMA guide · AI', text: m.t, bubbleStyle: bubble(m.r), wrapStyle: { display: 'grid', gap: 4, justifyItems: m.r === 'u' ? 'end' : 'start' } }));
+    const key = PREF[s.pref];
+    const rec = ROUTES[key];
+    const why = [
+      `You said this comes up ${s.freq.toLowerCase()}${s.freq === 'Daily' ? ', so a fix pays back quickly' : ''}.`,
+      `You asked for: ${s.pref.toLowerCase()}.`,
+      key === 'build' ? 'Implementation starts with analysis, so the build is scoped on evidence, not guesses.' : 'It is the smallest step that gives you a clear next decision.'
+    ];
+    const pick = (field, label, nextStep, reply) => () => this.say('u', label, { [field]: label, step: nextStep, msgs: [...s.msgs, { r: 'u', t: label }, ...(reply ? [{ r: 'g', t: reply }] : [])] });
+    let chips = [], chipsLabel = '';
+    if (s.step === 1) { chipsLabel = 'How often'; chips = ['Daily', 'Weekly', 'Occasionally'].map(l => ({ label: l, pick: pick('freq', l, 2, 'And what would you like from AMA?') })); }
+    if (s.step === 2) { chipsLabel = 'Help you want'; chips = Object.keys(PREF).map(l => ({ label: l, pick: pick('pref', l, 3, "Here's what I understood. Change anything that's wrong, then I'll explain what I'd suggest.") })); }
+    const empty = !s.draft.trim();
+    return {
+      messages, chips, chipsLabel, showChips: s.step === 1 || s.step === 2,
+      showSummary: s.step === 3, showRec: s.step === 4, showInput: s.step === 0, showRestart: s.step > 0,
+      need: s.need, freq: s.freq, pref: s.pref, who: s.who, draft: s.draft, draftEmpty: empty,
+      rec, why, others: Object.entries(ROUTES).filter(([k]) => k !== key).map(([, v]) => v),
+      sendStyle: { minHeight: 44, padding: '12px 24px', border: 0, borderRadius: 9999, background: empty ? '#242424' : '#C9A227', color: empty ? '#71717A' : '#080808', fontSize: 13, fontWeight: 600, letterSpacing: '0.04em', textTransform: 'uppercase', cursor: empty ? 'not-allowed' : 'pointer', alignSelf: 'flex-end' },
+      setDraft: e => this.setState({ draft: e.target.value }),
+      setNeed: e => this.setState({ need: e.target.value }), setFreq: e => this.setState({ freq: e.target.value }),
+      setPref: e => this.setState({ pref: e.target.value }), setWho: e => this.setState({ who: e.target.value }),
+      examples: [
+        { label: 'We re-type client details', use: () => this.setState({ draft: 'New clients email, call and fill in a form, and we re-type everything three times.' }) },
+        { label: 'Should we use AI at all?', use: () => this.setState({ draft: "Everyone says we should use AI, but I don't know where it would actually help my practice." }) }
+      ],
+      sendNeed: e => { e.preventDefault(); if (empty) return; const t = s.draft.trim(); this.setState({ need: t, draft: '', step: 1, msgs: [...s.msgs, { r: 'u', t }, { r: 'g', t: 'Thanks. Two quick questions so I suggest the right size of help. How often does this come up?' }] }); },
+      confirmSummary: e => { e.preventDefault(); this.setState({ step: 4, msgs: [...s.msgs, { r: 'g', t: "Based on your answers, here's what I'd suggest and why. It's a suggestion: every route below is open to you." }] }); },
+      editSummary: () => this.setState({ step: 3 }),
+      restart: () => this.setState({ step: 0, draft: '', need: '', who: '', msgs: [{ r: 'g', t: INTRO }] })
+    };
+  }
+}
+</script>
+</body>
+</html>

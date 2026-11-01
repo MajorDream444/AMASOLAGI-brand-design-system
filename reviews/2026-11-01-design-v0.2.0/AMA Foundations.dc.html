@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>AMA SOL AGI — Foundations (in_review)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#080808;color:#FFFFFF;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:#E3BB48;text-decoration:underline;text-underline-offset:3px}
+a:hover{color:#FFFFFF}
+:focus-visible{outline:2px solid #C9A227;outline-offset:3px;border-radius:4px}
+@keyframes amaTurn{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:10;border-bottom:1px solid #27272A;background:rgba(8,8,8,0.92);backdrop-filter:blur(8px)">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <a href="AMA Foundations.dc.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#FFFFFF">
+      <span style="font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:15px;letter-spacing:-0.01em">AMA SOL AGI</span>
+      <span style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#A1A1AA">Design system v0.2.0</span>
+    </a>
+    <nav aria-label="Design system" style="display:flex;gap:4px;flex-wrap:wrap">
+      <a href="AMA Foundations.dc.html" aria-current="page" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;font-weight:600;color:#E3BB48;text-decoration:none;background:rgba(201,162,39,0.08);border:1px solid rgba(201,162,39,0.2)">Foundations</a>
+      <a href="AMA Components.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Components</a>
+      <a href="AMA Applications.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Applications</a>
+      <a href="AMA Front Door.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Front door</a>
+      <a href="AMA Team and Usage.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Team and usage</a>
+      <a href="AMA Communications.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Communications</a>
+      <a href="AMA Onboarding.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Onboarding</a>
+    </nav>
+    <span style="display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:rgba(201,162,39,0.1);border:1px solid rgba(201,162,39,0.3);color:#E3BB48"><span aria-hidden="true">●</span>Approved · design base</span>
+  </div>
+</header>
+
+<main style="max-width:1200px;margin:0 auto;padding:0 24px">
+
+  <section style="padding:80px 0 64px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;align-items:center" data-screen-label="Intro">
+    <div>
+      <p style="margin:0 0 24px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C9A227">Visual foundations · 31 Oct 2026</p>
+      <h1 style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:clamp(40px,6vw,72px);font-weight:500;line-height:1.04;letter-spacing:-0.02em;text-wrap:balance">One identity for the site, the work and the <span style="color:#C9A227">handover</span>.</h1>
+      <p style="margin:24px 0 0;max-width:560px;color:#A1A1AA;text-wrap:pretty">Foundations for AMA SOL AGI' website, commerce, consulting documents and client workspaces. Website values come from the supplied amasolagi.com tokens. Anything new is marked as a proposal and stays in review until Major Dream Williams approves it.</p>
+    </div>
+    <figure style="margin:0;background:#F5F2EA;border-radius:32px;padding:40px;display:flex;flex-direction:column;align-items:center;gap:16px">
+      <img src="logos/approved/ama-badge.png" alt="AMA SOL AGI badge, approved raster reference" style="width:100%;max-width:320px;height:auto;display:block">
+      <figcaption style="font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#5C5850;text-align:center">ama-badge.png · approved raster reference · 1024px · untouched, on warm white</figcaption>
+    </figure>
+  </section>
+
+  <section style="padding:64px 0;border-top:1px solid #27272A" data-screen-label="00 Assessment">
+    <p style="margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C9A227">00 / Assessment of supplied materials</p>
+    <h2 style="margin:0 0 32px;font-family:Inter,system-ui,sans-serif;font-size:clamp(28px,4vw,40px);font-weight:500;line-height:1.1;letter-spacing:-0.01em">What is settled, what is provisional, what is missing.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+      <article style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+        <p style="margin:0 0 16px;display:flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#5FB38A"><span aria-hidden="true">●</span>Established</p>
+        <ul style="margin:0;padding-left:18px;color:#A1A1AA;font-size:13px;display:grid;gap:8px">
+          <li><span style="color:#FFFFFF">Badge, monogram, horizontal lockup</span> as raster references with inherited documentary approval (date unknown).</li>
+          <li>Public name AMA SOL AGI, legal name AMA Solutions Corporation (legal name to verify), amasolagi.com.</li>
+          <li>Website tokens: #080808, #151515, #FFFFFF, #A1A1AA, #C9A227, #E3BB48.</li>
+          <li>Website type: Inter display, JetBrains Mono supporting.</li>
+          <li>8px base, 1200px container, 32px card radius, pill controls.</li>
+          <li>Voice rules: no invented proof, guarantees or deployed-agent counts.</li>
+        </ul>
+      </article>
+      <article style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+        <p style="margin:0 0 16px;display:flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#E3BB48"><span aria-hidden="true">◐</span>Provisional</p>
+        <ul style="margin:0;padding-left:18px;color:#A1A1AA;font-size:13px;display:grid;gap:8px">
+          <li>Corporate palette (obsidian, warm white, champagne, deep gold, slate) and status colours.</li>
+          <li>Document fonts: Source Serif 4, IBM Plex Sans, JetBrains Mono. CSS and brand book disagree.</li>
+          <li>Clear space ¼ diameter; minimums badge 64px, monogram 96px, lockup 320px.</li>
+          <li>Transparent cut-outs: hard alpha mask, cream fringe and shadow remain.</li>
+          <li>720px breakpoint, 44px control height.</li>
+        </ul>
+      </article>
+      <article style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+        <p style="margin:0 0 16px;display:flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#E07A6E"><span aria-hidden="true">○</span>Missing</p>
+        <ul style="margin:0;padding-left:18px;color:#A1A1AA;font-size:13px;display:grid;gap:8px">
+          <li>True vector master and exact wordmark construction. The v002 redraw shows visible faults at folds and the centre apex.</li>
+          <li>Dark-ground wordmark, one-colour, stacked and compact marks.</li>
+          <li>Print colour specs (CMYK, Pantone, foil).</li>
+          <li>Font licence files, logo and imagery rights evidence.</li>
+          <li>Confirmed offer catalogue, prices, payment and booking integrations.</li>
+          <li>Approved legal terms. Drafts exist (amasolagi-site PR #7) but are not yet approved or published.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section style="padding:64px 0;border-top:1px solid #27272A" data-screen-label="01 Logo">
+    <p style="margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C9A227">01 / Logo</p>
+    <h2 style="margin:0 0 16px;font-family:Inter,system-ui,sans-serif;font-size:clamp(28px,4vw,40px);font-weight:500;line-height:1.1;letter-spacing:-0.01em">The badge is a seal. Use it where it matters.</h2>
+    <p style="margin:0 0 32px;max-width:720px;color:#A1A1AA;text-wrap:pretty">Covers, hero moments and sign-offs carry the dimensional badge. Operational screens carry the name in type. The approved files are rasters on a light ground, so they sit on warm white at or below native resolution.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+      <figure style="margin:0;background:#151515;border:1px solid #27272A;border-radius:32px;overflow:hidden">
+        <div style="background:#F5F2EA;height:280px;display:flex;align-items:center;justify-content:center;padding:32px"><img src="logos/approved/ama-badge.png" alt="AMA badge" style="max-height:100%;max-width:100%"></div>
+        <figcaption style="padding:16px 24px;font-size:13px"><span style="color:#FFFFFF">Badge</span> <span style="color:#A1A1AA">· master · covers, hero, seals</span><br><span style="font-size:11px;color:#5FB38A">● Approved reference</span></figcaption>
+      </figure>
+      <figure style="margin:0;background:#151515;border:1px solid #27272A;border-radius:32px;overflow:hidden">
+        <div style="background:#F5F2EA;height:280px;display:flex;align-items:center;justify-content:center;padding:32px"><img src="logos/approved/ama-monogram.png" alt="AMA monogram" style="max-height:100%;max-width:100%"></div>
+        <figcaption style="padding:16px 24px;font-size:13px"><span style="color:#FFFFFF">Monogram</span> <span style="color:#A1A1AA">· same identity, no ring</span><br><span style="font-size:11px;color:#5FB38A">● Approved reference</span></figcaption>
+      </figure>
+      <figure style="margin:0;background:#151515;border:1px solid #27272A;border-radius:32px;overflow:hidden">
+        <div style="background:#FFFFFF;height:280px;display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="logos/approved/ama-lockup-horizontal.png" alt="AMA horizontal lockup" style="width:150%;max-width:none;margin-left:20%"></div>
+        <figcaption style="padding:16px 24px;font-size:13px"><span style="color:#FFFFFF">Horizontal lockup</span> <span style="color:#A1A1AA">· light grounds only</span><br><span style="font-size:11px;color:#E3BB48">▲ Large canvas margins; cream panel behind badge; dark lettering</span></figcaption>
+      </figure>
+    </div>
+
+    <div style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+      <article style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+        <p style="margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#A1A1AA">Background compatibility</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+          <div style="display:grid;gap:6px"><div style="aspect-ratio:1;background:#F5F2EA;border-radius:16px;display:flex;align-items:center;justify-content:center;padding:10px"><img src="logos/approved/ama-badge.png" alt="" style="width:100%"></div><span style="font-size:11px;color:#5FB38A">● Warm white</span></div>
+          <div style="display:grid;gap:6px"><div style="aspect-ratio:1;background:#171717;border-radius:16px;display:flex;align-items:center;justify-content:center;padding:10px"><img src="logos/review/AMA_Badge_512x512_EN_v001_REVIEW.png" alt="" style="width:100%"></div><span style="font-size:11px;color:#E3BB48">◐ Charcoal · cut-out</span></div>
+          <div style="display:grid;gap:6px"><div style="aspect-ratio:1;background:#C9A227;border-radius:16px;display:flex;align-items:center;justify-content:center;padding:10px"><img src="logos/review/AMA_Badge_512x512_EN_v001_REVIEW.png" alt="" style="width:100%"></div><span style="font-size:11px;color:#E07A6E">× Gold field</span></div>
+        </div>
+        <p style="margin:16px 0 0;font-size:13px;color:#A1A1AA">Dark-ground use relies on the in_review cut-out, which keeps a cream fringe at the rim. Inspect at 100% before any use. Never place the badge on a gold field.</p>
+      </article>
+      <article style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+        <p style="margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#A1A1AA">Proposed clear space · ¼ diameter</p>
+        <div style="background:#F5F2EA;border-radius:16px;padding:24px;display:flex;justify-content:center">
+          <div style="position:relative;width:200px;height:200px;outline:1px dashed #9B6B22;outline-offset:0">
+            <div style="position:absolute;inset:25px;outline:1px solid #9B6B22"></div>
+            <img src="logos/approved/ama-badge.png" alt="" style="position:absolute;inset:25px;width:150px;height:150px">
+            <span style="position:absolute;left:4px;top:4px;font-size:10px;color:#5C5850">x</span>
+            <span style="position:absolute;right:4px;bottom:4px;font-size:10px;color:#5C5850">x = d/4</span>
+          </div>
+        </div>
+        <p style="margin:16px 0 0;font-size:13px;color:#A1A1AA">Keep other elements outside the dashed line. Evaluation starting point from USAGE_AND_RIGHTS, not an approved standard.</p>
+      </article>
+      <article style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+        <p style="margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#A1A1AA">Small sizes · true pixels</p>
+        <div style="display:flex;align-items:flex-end;gap:20px;background:#F5F2EA;border-radius:16px;padding:24px;flex-wrap:wrap">
+          <div style="display:grid;gap:6px;justify-items:center"><img src="logos/review/AMA_Badge_64x64_EN_v001_REVIEW.png" alt="" width="64" height="64"><span style="font-size:10px;color:#5C5850">64</span></div>
+          <div style="display:grid;gap:6px;justify-items:center"><img src="logos/review/AMA_Badge_32x32_EN_v001_REVIEW.png" alt="" width="32" height="32"><span style="font-size:10px;color:#5C5850">32</span></div>
+          <div style="display:grid;gap:6px;justify-items:center"><img src="logos/review/AMA_Badge_16x16_EN_v001_REVIEW.png" alt="" width="16" height="16"><span style="font-size:10px;color:#5C5850">16</span></div>
+        </div>
+        <p style="margin:16px 0 0;font-size:13px;color:#A1A1AA">Rim and nodes merge at 16–32px. Favicons and avatars below 64px wait for an approved compact mark. Do not ship these samples.</p>
+      </article>
+    </div>
+
+    <div style="margin-top:16px;background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px">
+      <div><p style="margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#5FB38A">✓ Do</p><ul style="margin:0;padding-left:18px;font-size:13px;color:#A1A1AA;display:grid;gap:6px"><li>Use untouched references on warm white.</li><li>Resample down only.</li><li>Set "AMA SOL AGI" in Inter 600 for nav and footers.</li></ul></div>
+      <div><p style="margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#E07A6E">× Don't</p><ul style="margin:0;padding-left:18px;font-size:13px;color:#A1A1AA;display:grid;gap:6px"><li>Recolour, invert, add a ring or remove nodes.</li><li>Enlarge beyond native pixels.</li><li>Call an SVG wrapping a PNG a vector logo.</li></ul></div>
+      <div><p style="margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#E3BB48">◐ Held in review</p><ul style="margin:0;padding-left:18px;font-size:13px;color:#A1A1AA;display:grid;gap:6px"><li>v002 redraw, compact, one-colour, stacked.</li><li>Dark-ground wordmark.</li><li>Interim triangle mark: website legacy only.</li></ul></div>
+    </div>
+  </section>
+
+  <section style="padding:64px 0;border-top:1px solid #27272A" data-screen-label="02 Color">
+    <p style="margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C9A227">02 / Colour</p>
+    <h2 style="margin:0 0 16px;font-family:Inter,system-ui,sans-serif;font-size:clamp(28px,4vw,40px);font-weight:500;line-height:1.1;letter-spacing:-0.01em">Gold is a material, not a fill.</h2>
+    <p style="margin:0 0 32px;max-width:720px;color:#A1A1AA">Two layers, kept apart. Website tokens are documented amasolagi.com values. The document palette is provisional and is not a sampled metallic, CMYK or Pantone specification.</p>
+
+    <p style="margin:0 0 12px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#A1A1AA">Website tokens · documented</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px">
+      <div style="border:1px solid #27272A;border-radius:16px;overflow:hidden"><div style="height:88px;background:#080808"></div><div style="padding:12px 16px;background:#151515;font-size:12px"><div style="color:#FFFFFF">--bg</div><div style="color:#A1A1AA">#080808 · page</div></div></div>
+      <div style="border:1px solid #27272A;border-radius:16px;overflow:hidden"><div style="height:88px;background:#151515"></div><div style="padding:12px 16px;background:#151515;border-top:1px solid #27272A;font-size:12px"><div style="color:#FFFFFF">--surface</div><div style="color:#A1A1AA">#151515 · cards, inputs</div></div></div>
+      <div style="border:1px solid #27272A;border-radius:16px;overflow:hidden"><div style="height:88px;background:#FFFFFF"></div><div style="padding:12px 16px;background:#151515;font-size:12px"><div style="color:#FFFFFF">--text</div><div style="color:#A1A1AA">#FFFFFF · headings</div></div></div>
+      <div style="border:1px solid #27272A;border-radius:16px;overflow:hidden"><div style="height:88px;background:#A1A1AA"></div><div style="padding:12px 16px;background:#151515;font-size:12px"><div style="color:#FFFFFF">--text-secondary</div><div style="color:#A1A1AA">#A1A1AA · body</div></div></div>
+      <div style="border:1px solid #27272A;border-radius:16px;overflow:hidden"><div style="height:88px;background:#C9A227"></div><div style="padding:12px 16px;background:#151515;font-size:12px"><div style="color:#FFFFFF">--gold</div><div style="color:#A1A1AA">#C9A227 · primary, focus</div></div></div>
+      <div style="border:1px solid #27272A;border-radius:16px;overflow:hidden"><div style="height:88px;background:#E3BB48"></div><div style="padding:12px 16px;background:#151515;font-size:12px"><div style="color:#FFFFFF">--gold-light</div><div style="color:#A1A1AA">#E3BB48 · hover, active</div></div></div>
+    </div>
+    <p style="margin:12px 0 32px;font-size:12px;color:#A1A1AA">Support: --surface-2 #1C1C1C · --surface-3 #242424 · --border #27272A · --border-light #3F3F46 · --text-dim #71717A · --gold-dim #8A6D1A</p>
+
+    <p style="margin:0 0 12px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#A1A1AA">Document palette · provisional</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px">
+      <div style="border:1px dashed #3F3F46;border-radius:16px;overflow:hidden"><div style="height:72px;background:#0A0A0A"></div><div style="padding:12px 16px;font-size:12px"><div>brand-obsidian</div><div style="color:#A1A1AA">#0A0A0A</div></div></div>
+      <div style="border:1px dashed #3F3F46;border-radius:16px;overflow:hidden"><div style="height:72px;background:#171717"></div><div style="padding:12px 16px;font-size:12px"><div>brand-charcoal</div><div style="color:#A1A1AA">#171717</div></div></div>
+      <div style="border:1px dashed #3F3F46;border-radius:16px;overflow:hidden"><div style="height:72px;background:#F5F2EA"></div><div style="padding:12px 16px;font-size:12px"><div>brand-warm-white</div><div style="color:#A1A1AA">#F5F2EA · paper</div></div></div>
+      <div style="border:1px dashed #3F3F46;border-radius:16px;overflow:hidden"><div style="height:72px;background:#D6AD62"></div><div style="padding:12px 16px;font-size:12px"><div>brand-champagne</div><div style="color:#A1A1AA">#D6AD62 · dark grounds</div></div></div>
+      <div style="border:1px dashed #3F3F46;border-radius:16px;overflow:hidden"><div style="height:72px;background:#9B6B22"></div><div style="padding:12px 16px;font-size:12px"><div>brand-deep-gold</div><div style="color:#A1A1AA">#9B6B22 · rules, 24px+</div></div></div>
+      <div style="border:1px dashed #3F3F46;border-radius:16px;overflow:hidden"><div style="height:72px;background:#77736B"></div><div style="padding:12px 16px;font-size:12px"><div>brand-slate</div><div style="color:#A1A1AA">#77736B · 18px+ only</div></div></div>
+    </div>
+
+    <p style="margin:32px 0 12px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#A1A1AA">Measured contrast · WCAG 2.x</p>
+    <div style="overflow-x:auto;border:1px solid #27272A;border-radius:16px">
+      <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:640px">
+        <thead><tr style="text-align:left;color:#A1A1AA;font-size:11px;letter-spacing:0.08em;text-transform:uppercase"><th style="padding:12px 16px;border-bottom:1px solid #27272A;font-weight:600">Pair</th><th style="padding:12px 16px;border-bottom:1px solid #27272A;font-weight:600">Ratio</th><th style="padding:12px 16px;border-bottom:1px solid #27272A;font-weight:600">Use</th><th style="padding:12px 16px;border-bottom:1px solid #27272A;font-weight:600">Result</th></tr></thead>
+        <tbody>
+          <tr><td style="padding:10px 16px;border-bottom:1px solid #27272A"><span style="color:#FFFFFF">#FFFFFF</span> on #080808</td><td style="padding:10px 16px;border-bottom:1px solid #27272A">20.0</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#A1A1AA">All text</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#5FB38A">✓ AAA</td></tr>
+          <tr><td style="padding:10px 16px;border-bottom:1px solid #27272A"><span style="color:#A1A1AA">#A1A1AA</span> on #151515</td><td style="padding:10px 16px;border-bottom:1px solid #27272A">7.1</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#A1A1AA">Body on cards</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#5FB38A">✓ AAA</td></tr>
+          <tr><td style="padding:10px 16px;border-bottom:1px solid #27272A"><span style="color:#C9A227">#C9A227</span> on #151515</td><td style="padding:10px 16px;border-bottom:1px solid #27272A">7.6</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#A1A1AA">Labels, links, focus</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#5FB38A">✓ AAA</td></tr>
+          <tr><td style="padding:10px 16px;border-bottom:1px solid #27272A"><span style="background:#C9A227;color:#080808;padding:0 4px">#080808</span> on #C9A227</td><td style="padding:10px 16px;border-bottom:1px solid #27272A">8.3</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#A1A1AA">Primary button</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#5FB38A">✓ AAA</td></tr>
+          <tr><td style="padding:10px 16px;border-bottom:1px solid #27272A"><span style="color:#71717A">#71717A</span> on #151515</td><td style="padding:10px 16px;border-bottom:1px solid #27272A">3.8</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#A1A1AA">Input borders, disabled</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#E3BB48">◐ UI only, not text</td></tr>
+          <tr><td style="padding:10px 16px;border-bottom:1px solid #27272A">#3F3F46 on #080808</td><td style="padding:10px 16px;border-bottom:1px solid #27272A">1.9</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#A1A1AA">Card borders</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#E3BB48">◐ Decorative only</td></tr>
+          <tr><td style="padding:10px 16px;border-bottom:1px solid #27272A">#0A0A0A on #F5F2EA</td><td style="padding:10px 16px;border-bottom:1px solid #27272A">17.7</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#A1A1AA">Document text</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#5FB38A">✓ AAA</td></tr>
+          <tr><td style="padding:10px 16px;border-bottom:1px solid #27272A">#9B6B22 on #F5F2EA</td><td style="padding:10px 16px;border-bottom:1px solid #27272A">4.2</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#A1A1AA">Gold on paper</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#E3BB48">◐ 24px+ or rules</td></tr>
+          <tr><td style="padding:10px 16px;border-bottom:1px solid #27272A">#D6AD62 on #F5F2EA</td><td style="padding:10px 16px;border-bottom:1px solid #27272A">1.9</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#A1A1AA">Champagne on paper</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#E07A6E">× Never text</td></tr>
+          <tr><td style="padding:10px 16px;border-bottom:1px solid #27272A">#397A5B / #A8463C on #151515</td><td style="padding:10px 16px;border-bottom:1px solid #27272A">3.6 / 3.1</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#A1A1AA">Supplied status on dark</td><td style="padding:10px 16px;border-bottom:1px solid #27272A;color:#E07A6E">× Fails small text</td></tr>
+          <tr><td style="padding:10px 16px"><span style="color:#5FB38A">#5FB38A</span> · <span style="color:#D98E3A">#D98E3A</span> · <span style="color:#E07A6E">#E07A6E</span> on #151515</td><td style="padding:10px 16px">7.2 · 6.9 · 6.2</td><td style="padding:10px 16px;color:#A1A1AA">Proposed status ink, dark</td><td style="padding:10px 16px;color:#E3BB48">◐ Proposal</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin:12px 0 0;font-size:12px;color:#A1A1AA">Proposals for paper: ink-secondary #5C5850 (6.3:1) and gold-ink #7A5418 (6.0:1) for small gold text on warm white. Status on paper: #2E6249, #875614, #8A3A31 (all ≥5.5:1).</p>
+  </section>
+
+  <section style="padding:64px 0;border-top:1px solid #27272A" data-screen-label="03 Type">
+    <p style="margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C9A227">03 / Typography</p>
+    <h2 style="margin:0 0 32px;font-family:Inter,system-ui,sans-serif;font-size:clamp(28px,4vw,40px);font-weight:500;line-height:1.1;letter-spacing:-0.01em">Two hierarchies: screen and document.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px">
+      <article style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:32px;display:grid;gap:20px;align-content:start">
+        <p style="margin:0;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#5FB38A">● Website · documented</p>
+        <div><div style="font-family:Inter,system-ui,sans-serif;font-size:48px;font-weight:500;line-height:1.1;letter-spacing:-0.01em">Expertise, put to work.</div><div style="font-size:11px;color:#A1A1AA">display-md · Inter 500 · 48/1.1 · −0.01em</div></div>
+        <div><div style="font-family:Inter,system-ui,sans-serif;font-size:32px;font-weight:500;line-height:1.2">Scope before payment.</div><div style="font-size:11px;color:#A1A1AA">display-sm · Inter 500 · 32/1.2</div></div>
+        <div><div style="font-size:15px;line-height:1.65;color:#A1A1AA">Each engagement names an owner, the inputs we need from you and the next decision.</div><div style="font-size:11px;color:#A1A1AA">body-mono · JetBrains Mono 400 · 15/1.65</div></div>
+        <div><div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C9A227">Implementation · 01</div><div style="font-size:11px;color:#A1A1AA">label-mono · 11 · 600 · 0.12em caps</div></div>
+        <p style="margin:0;font-size:12px;color:#A1A1AA">Fallbacks: Inter → system-ui, sans-serif. JetBrains Mono → ui-monospace, monospace. Both SIL OFL via Google Fonts; obtain licence texts before packaging.</p>
+      </article>
+      <article style="background:#F5F2EA;color:#0A0A0A;border-radius:32px;padding:32px;display:grid;gap:20px;align-content:start">
+        <p style="margin:0;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#875614">◐ Documents · recommended, pending approval</p>
+        <div><div style="font-family:'Source Serif 4',Georgia,serif;font-size:44px;font-weight:600;line-height:1.1;letter-spacing:-0.01em">A clearer client intake</div><div style="font-size:11px;color:#5C5850">doc-title · Source Serif 4 600 · 44/1.1</div></div>
+        <div><div style="font-family:'Source Serif 4',Georgia,serif;font-size:28px;font-weight:600;line-height:1.2">Intended outcome</div><div style="font-size:11px;color:#5C5850">doc-h1 · Source Serif 4 600 · 28/1.2</div></div>
+        <div><div style="font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:18px;font-weight:600;line-height:1.3">Deliverables and exclusions</div><div style="font-size:11px;color:#5C5850">doc-h2 · IBM Plex Sans 600 · 18/1.3</div></div>
+        <div><div style="font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:16px;line-height:1.55">We map your repeated intake work and build a reviewable workflow with a named human owner.</div><div style="font-size:11px;color:#5C5850">doc-body · IBM Plex Sans 400 · 16/1.55 · 10.5pt print</div></div>
+        <div><div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase">AMA-P-0001 · Draft · 31 Oct 2026</div><div style="font-size:11px;color:#5C5850">doc-label · JetBrains Mono 600 · 11</div></div>
+      </article>
+    </div>
+    <div style="margin-top:16px;background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+      <p style="margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#E3BB48">Recommendation · resolves the CSS / brand book conflict</p>
+      <p style="margin:0;font-size:13px;color:#A1A1AA;max-width:900px;text-wrap:pretty">Follow the brand book: <span style="color:#FFFFFF">Source Serif 4</span> for doc-title and doc-h1, <span style="color:#FFFFFF">IBM Plex Sans</span> for doc-h2 and body, <span style="color:#FFFFFF">JetBrains Mono</span> for labels, IDs and dates. Tables move to IBM Plex Sans 13px rather than mono, because proposals carry long text in cells and mono widens them. The serif gives documents a distinct, considered voice next to the Inter-led website, while mono labels keep the two related. Fallbacks: Georgia, system-ui, ui-monospace. Until approved, documents may render entirely in fallbacks without breaking layout.</p>
+    </div>
+  </section>
+
+  <section style="padding:64px 0;border-top:1px solid #27272A" data-screen-label="04 Layout">
+    <p style="margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C9A227">04 / Space, grid, surfaces</p>
+    <h2 style="margin:0 0 32px;font-family:Inter,system-ui,sans-serif;font-size:clamp(28px,4vw,40px);font-weight:500;line-height:1.1;letter-spacing:-0.01em">An 8px base with room to breathe.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px">
+      <article style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+        <p style="margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#A1A1AA">Spacing scale</p>
+        <div style="display:grid;gap:10px;font-size:12px">
+          <div style="display:grid;grid-template-columns:72px 1fr;align-items:center;gap:12px"><span style="color:#A1A1AA">8 · base</span><span style="height:12px;width:8px;background:#C9A227;border-radius:2px"></span></div>
+          <div style="display:grid;grid-template-columns:72px 1fr;align-items:center;gap:12px"><span style="color:#A1A1AA">16 · gap</span><span style="height:12px;width:16px;background:#C9A227;border-radius:2px"></span></div>
+          <div style="display:grid;grid-template-columns:72px 1fr;align-items:center;gap:12px"><span style="color:#A1A1AA">24 · card</span><span style="height:12px;width:24px;background:#C9A227;border-radius:2px"></span></div>
+          <div style="display:grid;grid-template-columns:72px 1fr;align-items:center;gap:12px"><span style="color:#A1A1AA">32</span><span style="height:12px;width:32px;background:#C9A227;border-radius:2px"></span></div>
+          <div style="display:grid;grid-template-columns:72px 1fr;align-items:center;gap:12px"><span style="color:#A1A1AA">48</span><span style="height:12px;width:48px;background:#C9A227;border-radius:2px"></span></div>
+          <div style="display:grid;grid-template-columns:72px 1fr;align-items:center;gap:12px"><span style="color:#A1A1AA">80 · section</span><span style="height:12px;width:80px;background:#C9A227;border-radius:2px"></span></div>
+        </div>
+      </article>
+      <article style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+        <p style="margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#A1A1AA">Grid and breakpoints</p>
+        <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:6px;height:56px;margin-bottom:16px">
+          <span style="background:rgba(201,162,39,0.15);border-radius:4px"></span><span style="background:rgba(201,162,39,0.15);border-radius:4px"></span><span style="background:rgba(201,162,39,0.15);border-radius:4px"></span><span style="background:rgba(201,162,39,0.15);border-radius:4px"></span><span style="background:rgba(201,162,39,0.15);border-radius:4px"></span><span style="background:rgba(201,162,39,0.15);border-radius:4px"></span><span style="background:rgba(201,162,39,0.15);border-radius:4px"></span><span style="background:rgba(201,162,39,0.15);border-radius:4px"></span><span style="background:rgba(201,162,39,0.15);border-radius:4px"></span><span style="background:rgba(201,162,39,0.15);border-radius:4px"></span><span style="background:rgba(201,162,39,0.15);border-radius:4px"></span><span style="background:rgba(201,162,39,0.15);border-radius:4px"></span>
+        </div>
+        <ul style="margin:0;padding-left:18px;font-size:13px;color:#A1A1AA;display:grid;gap:6px">
+          <li><span style="color:#FFFFFF">≥ 1024</span> · 12 col · 1200 max · 24 gutter</li>
+          <li><span style="color:#FFFFFF">720–1023</span> · 8 col · 24 margin · 16 gutter</li>
+          <li><span style="color:#FFFFFF">&lt; 720</span> · 4 col · 16 margin · 16 gutter · stacked cards</li>
+          <li>Controls ≥ 44px tall; touch targets ≥ 44×44.</li>
+        </ul>
+      </article>
+      <article style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+        <p style="margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#A1A1AA">Corners and elevation</p>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;font-size:11px;color:#A1A1AA;text-align:center">
+          <div style="display:grid;gap:6px"><div style="height:56px;border:1px solid #3F3F46;border-radius:8px"></div>8 · chip</div>
+          <div style="display:grid;gap:6px"><div style="height:56px;border:1px solid #3F3F46;border-radius:16px"></div>16 · panel</div>
+          <div style="display:grid;gap:6px"><div style="height:56px;border:1px solid #3F3F46;border-radius:32px"></div>32 · card</div>
+          <div style="display:grid;gap:6px"><div style="height:56px;border:1px solid #3F3F46;border-radius:9999px"></div>pill</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px;font-size:11px;color:#A1A1AA">
+          <div style="background:#1C1C1C;border:1px solid #27272A;border-radius:16px;padding:16px">Rest · border only</div>
+          <div style="background:#1C1C1C;border:1px solid #8A6D1A;border-radius:16px;padding:16px;box-shadow:0 0 0 1px #8A6D1A,0 8px 32px rgba(201,162,39,0.15);transform:translateY(-2px)">Hover · gold lift</div>
+        </div>
+      </article>
+      <article style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+        <p style="margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#A1A1AA">Iconography · proposed</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;color:#FFFFFF;margin-bottom:16px">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label="Complete"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.5 2.5L16 9.5"></path></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-label="In progress"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 010 18z" fill="currentColor"></path></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-label="Pending"><circle cx="12" cy="12" r="9" stroke-dasharray="3 3"></circle></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-label="Warning"><path d="M12 3.5l9.5 16.5h-19z"></path><path d="M12 10v4M12 17v.5" stroke-linecap="round"></path></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-label="Error"><rect x="3.5" y="3.5" width="17" height="17" rx="4"></rect><path d="M9 9l6 6M15 9l-6 6"></path></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label="Next"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label="Document"><path d="M6 3h8l4 4v14H6z"></path><path d="M14 3v4h4M9 12h6M9 16h6"></path></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-label="Person"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>
+        </div>
+        <p style="margin:0;font-size:13px;color:#A1A1AA">24px grid, 1.5px stroke, round caps, currentColor. Status shapes stay distinct without colour: filled, half, dashed, triangle, square. Full family still to be drawn.</p>
+      </article>
+    </div>
+  </section>
+
+  <section style="padding:64px 0 96px;border-top:1px solid #27272A" data-screen-label="05 Motion">
+    <p style="margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C9A227">05 / Motion</p>
+    <h2 style="margin:0 0 32px;font-family:Inter,system-ui,sans-serif;font-size:clamp(28px,4vw,40px);font-weight:500;line-height:1.1;letter-spacing:-0.01em">Slow, deliberate, and optional.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+      <div style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px"><div style="font-family:Inter,system-ui,sans-serif;font-size:28px;font-weight:500">150ms</div><p style="margin:8px 0 0;font-size:13px;color:#A1A1AA">Controls: colour, border, 1px lift on buttons.</p></div>
+      <div style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px"><div style="font-family:Inter,system-ui,sans-serif;font-size:28px;font-weight:500">250ms</div><p style="margin:8px 0 0;font-size:13px;color:#A1A1AA">Cards: border, shadow, 2px lift. Dialogs open.</p></div>
+      <div style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px"><div style="font-family:Inter,system-ui,sans-serif;font-size:28px;font-weight:500">700ms</div><p style="margin:8px 0 0;font-size:13px;color:#A1A1AA">Entrance: fadeUp 24px, fadeIn, maskReveal. Once per view.</p></div>
+      <div style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px"><div style="font-size:13px;color:#FFFFFF">cubic-bezier(0.16, 1, 0.3, 1)</div><p style="margin:8px 0 0;font-size:13px;color:#A1A1AA">One easing curve. With prefers-reduced-motion, durations collapse to 0.01ms and lifts are removed; state still changes.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer style="border-top:1px solid #27272A">
+  <div style="max-width:1200px;margin:0 auto;padding:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:#A1A1AA">
+    <span>AMA Solutions Corporation (legal name to verify) · amasolagi.com</span>
+    <span>Design system v0.2.0 · in_review · approver: Major Dream Williams</span>
+  </div>
+</footer>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* AMA Solutions design system v0.2.0 — in_review. Not approved.
+   Layer 1 (website) = supplied amasolagi.com values, unchanged.
+   Layer 2 (proposed) = additions from Claude Design v0.2.0; each needs founder approval. */
+:root {
+  /* website · documented */
+  --bg:#080808; --surface:#151515; --surface-2:#1c1c1c; --surface-3:#242424;
+  --text:#ffffff; --text-secondary:#a1a1aa; --text-dim:#71717a;
+  --border:#27272a; --border-light:#3f3f46;
+  --gold:#c9a227; --gold-light:#e3bb48; --gold-dim:#8a6d1a;
+  --gold-glow:rgba(201,162,39,.15); --gold-glow-sm:rgba(201,162,39,.08);
+  --space-1:8px; --space-2:16px; --space-3:24px; --space-4:32px; --space-6:48px; --space-10:80px;
+  --container:1200px; --gutter:24px;
+  --radius-sm:8px; --radius-md:16px; --radius-card:32px; --radius-pill:9999px;
+  --ease:cubic-bezier(0.16,1,0.3,1); --dur-control:150ms; --dur-card:250ms; --dur-enter:700ms;
+  --font-display:"Inter",system-ui,sans-serif; --font-mono:"JetBrains Mono",ui-monospace,monospace;
+
+  /* document palette · provisional (supplied) */
+  --brand-obsidian:#0a0a0a; --brand-charcoal:#171717; --brand-warm-white:#f5f2ea; --brand-soft-white:#e7e3da;
+  --brand-champagne-gold:#d6ad62; --brand-deep-gold:#9b6b22; --brand-slate:#77736b;
+
+  /* proposed · in_review */
+  --input-border:var(--text-dim);            /* 3.8:1 on surface, meets 3:1 UI boundary */
+  --status-success-ink:#5fb38a;              /* 7.2:1 on #151515 */
+  --status-warning-ink:#d98e3a;              /* 6.9:1 */
+  --status-danger-ink:#e07a6e;               /* 6.2:1 */
+  --paper-ink:#0a0a0a; --paper-ink-secondary:#5c5850; /* 6.3:1 on warm white */
+  --paper-gold-ink:#7a5418;                  /* 6.0:1, small gold text on paper */
+  --paper-rule:#d8d3c7; --paper-rule-strong:#a8a293;
+  --paper-success:#2e6249; --paper-warning:#875614; --paper-danger:#8a3a31;
+  --control-min:44px; --bp-mobile:720px; --bp-desktop:1024px;
+  --font-doc-serif:"Source Serif 4",Georgia,serif; --font-doc-sans:"IBM Plex Sans",system-ui,sans-serif;
+}
+@media (prefers-reduced-motion: reduce){ *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important} }
