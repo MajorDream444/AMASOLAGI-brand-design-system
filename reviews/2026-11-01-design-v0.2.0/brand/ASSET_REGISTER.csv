@@ -1,0 +1,139 @@
+asset_id,path,version,status,approver,approval_date,approval_evidence,intended_use
+AMA-0001,PACKAGE_NOTES.md,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0002,archive/README.md,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0003,brand/AMA_Comparison_1600x3600_v001_REVIEW.png,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0004,brand/AMA_Comparison_v001_REVIEW.pdf,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0005,brand/ASSET_AUDIT.md,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0006,brand/POSITIONING.md,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0007,brand/source-inventory.csv,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0008,guidelines/USAGE_AND_RIGHTS.md,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0009,handoffs/CLAUDE_DESIGN_HANDOFF.md,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0010,logos/approved/ama-badge.png,0.1.0,approved,Founder (inherited documentary evidence),,logos/sources/supplied-package/02-Logo-Masters/README.md; VECTOR-STATUS.md,Light-ground reference at native resolution
+AMA-0011,logos/approved/ama-lockup-horizontal.png,0.1.0,approved,Founder (inherited documentary evidence),,logos/sources/supplied-package/02-Logo-Masters/README.md; VECTOR-STATUS.md,Light-ground reference at native resolution
+AMA-0012,logos/approved/ama-monogram.png,0.1.0,approved,Founder (inherited documentary evidence),,logos/sources/supplied-package/02-Logo-Masters/README.md; VECTOR-STATUS.md,Light-ground reference at native resolution
+AMA-0013,logos/review/AMA_Badge_128x128_EN_v001_REVIEW.png,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0014,logos/review/AMA_Badge_16x16_EN_v001_REVIEW.png,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0015,logos/review/AMA_Badge_180x180_EN_v001_REVIEW.png,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0016,logos/review/AMA_Badge_192x192_EN_v001_REVIEW.png,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0017,logos/review/AMA_Badge_32x32_EN_v001_REVIEW.png,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0018,logos/review/AMA_Badge_48x48_EN_v001_REVIEW.png,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0019,logos/review/AMA_Badge_512x512_EN_v001_REVIEW.png,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0020,logos/review/AMA_Badge_64x64_EN_v001_REVIEW.png,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0021,logos/review/AMA_Favicon_v001_REVIEW.ico,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0022,logos/review/AMA_Logo_badge_794x801_EN_v001_REVIEW.png,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0023,logos/review/AMA_Logo_lockup-horizontal_601x430_EN_v001_REVIEW.png,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0024,logos/review/AMA_Logo_monogram_695x527_EN_v001_REVIEW.png,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0025,logos/sources/AMA-Brand-System-original.zip,source,reference,,,,Untouched source/provenance
+AMA-0026,logos/sources/supplied-package/.gitattributes,source,reference,,,,Untouched source/provenance
+AMA-0027,logos/sources/supplied-package/.gitignore,source,reference,,,,Untouched source/provenance
+AMA-0028,logos/sources/supplied-package/00-Start-Here/README.md,source,reference,,,,Untouched source/provenance
+AMA-0029,logos/sources/supplied-package/00-Start-Here/governance.md,source,reference,,,,Untouched source/provenance
+AMA-0030,logos/sources/supplied-package/01-Strategy-and-Voice/AMA_SOLUTIONS_CORPORATE_BRAND_HANDOFF.md,source,reference,,,,Untouched source/provenance
+AMA-0031,logos/sources/supplied-package/01-Strategy-and-Voice/brand-book.md,source,reference,,,,Untouched source/provenance
+AMA-0032,logos/sources/supplied-package/02-Logo-Masters/README.md,source,reference,,,,Untouched source/provenance
+AMA-0033,logos/sources/supplied-package/02-Logo-Masters/VECTOR-STATUS.md,source,reference,,,,Untouched source/provenance
+AMA-0034,logos/sources/supplied-package/02-Logo-Masters/approved-raster/ama-badge.png,source,reference,,,,Untouched source/provenance
+AMA-0035,logos/sources/supplied-package/02-Logo-Masters/approved-raster/ama-lockup-horizontal.png,source,reference,,,,Untouched source/provenance
+AMA-0036,logos/sources/supplied-package/02-Logo-Masters/approved-raster/ama-monogram.png,source,reference,,,,Untouched source/provenance
+AMA-0037,logos/sources/supplied-package/02-Logo-Masters/founder-originals/ama-badge-cream-a.jpg,source,reference,,,,Untouched source/provenance
+AMA-0038,logos/sources/supplied-package/02-Logo-Masters/founder-originals/ama-badge-cream-b.png,source,reference,,,,Untouched source/provenance
+AMA-0039,logos/sources/supplied-package/02-Logo-Masters/founder-originals/ama-lockup-badge-pair-wordmark.png,source,reference,,,,Untouched source/provenance
+AMA-0040,logos/sources/supplied-package/02-Logo-Masters/founder-originals/ama-lockup-square-a.jpg,source,reference,,,,Untouched source/provenance
+AMA-0041,logos/sources/supplied-package/02-Logo-Masters/founder-originals/ama-lockup-square-b.png,source,reference,,,,Untouched source/provenance
+AMA-0042,logos/sources/supplied-package/02-Logo-Masters/interim-website-mark/ama-glyph.svg,source,reference,,,,Untouched source/provenance
+AMA-0043,logos/sources/supplied-package/02-Logo-Masters/interim-website-mark/ama-mark.svg,source,reference,,,,Untouched source/provenance
+AMA-0044,logos/sources/supplied-package/03-Color-and-Type/tokens.css,source,reference,,,,Untouched source/provenance
+AMA-0045,logos/sources/supplied-package/03-Color-and-Type/tokens.json,source,reference,,,,Untouched source/provenance
+AMA-0046,logos/sources/supplied-package/04-Graphic-Elements/README.md,source,reference,,,,Untouched source/provenance
+AMA-0047,logos/sources/supplied-package/05-Templates/README.md,source,reference,,,,Untouched source/provenance
+AMA-0048,logos/sources/supplied-package/06-Website-and-Product/components/Badge/README.md,source,reference,,,,Untouched source/provenance
+AMA-0049,logos/sources/supplied-package/06-Website-and-Product/components/Badge/preview.html,source,reference,,,,Untouched source/provenance
+AMA-0050,logos/sources/supplied-package/06-Website-and-Product/components/Button/README.md,source,reference,,,,Untouched source/provenance
+AMA-0051,logos/sources/supplied-package/06-Website-and-Product/components/Button/preview.html,source,reference,,,,Untouched source/provenance
+AMA-0052,logos/sources/supplied-package/06-Website-and-Product/components/Card/README.md,source,reference,,,,Untouched source/provenance
+AMA-0053,logos/sources/supplied-package/06-Website-and-Product/components/Card/preview.html,source,reference,,,,Untouched source/provenance
+AMA-0054,logos/sources/supplied-package/06-Website-and-Product/components/Cover/preview.html,source,reference,,,,Untouched source/provenance
+AMA-0055,logos/sources/supplied-package/06-Website-and-Product/components/Nav/README.md,source,reference,,,,Untouched source/provenance
+AMA-0056,logos/sources/supplied-package/06-Website-and-Product/components/Nav/preview.html,source,reference,,,,Untouched source/provenance
+AMA-0057,logos/sources/supplied-package/06-Website-and-Product/components/NewsletterSignup/README.md,source,reference,,,,Untouched source/provenance
+AMA-0058,logos/sources/supplied-package/06-Website-and-Product/components/NewsletterSignup/preview.html,source,reference,,,,Untouched source/provenance
+AMA-0059,logos/sources/supplied-package/06-Website-and-Product/components/Wordmark/README.md,source,reference,,,,Untouched source/provenance
+AMA-0060,logos/sources/supplied-package/06-Website-and-Product/components/Wordmark/preview.html,source,reference,,,,Untouched source/provenance
+AMA-0061,logos/sources/supplied-package/06-Website-and-Product/components/bundle.css,source,reference,,,,Untouched source/provenance
+AMA-0062,logos/sources/supplied-package/06-Website-and-Product/imagery/README.md,source,reference,,,,Untouched source/provenance
+AMA-0063,logos/sources/supplied-package/06-Website-and-Product/imagery/ama-solutions-hamal-campus-concept.webp,source,reference,,,,Untouched source/provenance
+AMA-0064,logos/sources/supplied-package/06-Website-and-Product/imagery/artisans.webp,source,reference,,,,Untouched source/provenance
+AMA-0065,logos/sources/supplied-package/06-Website-and-Product/imagery/avant-garde.webp,source,reference,,,,Untouched source/provenance
+AMA-0066,logos/sources/supplied-package/06-Website-and-Product/imagery/dreamweavers.webp,source,reference,,,,Untouched source/provenance
+AMA-0067,logos/sources/supplied-package/06-Website-and-Product/imagery/guardians.webp,source,reference,,,,Untouched source/provenance
+AMA-0068,logos/sources/supplied-package/06-Website-and-Product/imagery/innovators.webp,source,reference,,,,Untouched source/provenance
+AMA-0069,logos/sources/supplied-package/06-Website-and-Product/imagery/luminaries.webp,source,reference,,,,Untouched source/provenance
+AMA-0070,logos/sources/supplied-package/06-Website-and-Product/imagery/maestros.webp,source,reference,,,,Untouched source/provenance
+AMA-0071,logos/sources/supplied-package/06-Website-and-Product/imagery/provocateurs.webp,source,reference,,,,Untouched source/provenance
+AMA-0072,logos/sources/supplied-package/06-Website-and-Product/imagery/revolutionaries.webp,source,reference,,,,Untouched source/provenance
+AMA-0073,logos/sources/supplied-package/06-Website-and-Product/imagery/strategists.webp,source,reference,,,,Untouched source/provenance
+AMA-0074,logos/sources/supplied-package/06-Website-and-Product/imagery/vanguards.webp,source,reference,,,,Untouched source/provenance
+AMA-0075,logos/sources/supplied-package/06-Website-and-Product/imagery/visionaries.webp,source,reference,,,,Untouched source/provenance
+AMA-0076,logos/sources/supplied-package/07-Social-and-Campaigns/README.md,source,reference,,,,Untouched source/provenance
+AMA-0077,logos/sources/supplied-package/08-Physical-and-Print/README.md,source,reference,,,,Untouched source/provenance
+AMA-0078,logos/sources/supplied-package/09-Archive/Interactive-Advisory-Storefront-Research-Brief_DRAFT.md,source,reference,,,,Untouched source/provenance
+AMA-0079,logos/sources/supplied-package/09-Archive/README.md,source,reference,,,,Untouched source/provenance
+AMA-0080,logos/sources/supplied-package/MANIFEST.sha256,source,reference,,,,Untouched source/provenance
+AMA-0081,logos/sources/supplied-package/README.md,source,reference,,,,Untouched source/provenance
+AMA-0082,logos/sources/supplied-package/design-system-source/project/README.md,source,reference,,,,Untouched source/provenance
+AMA-0083,logos/sources/supplied-package/design-system-source/project/assets/Imagery/README.md,source,reference,,,,Untouched source/provenance
+AMA-0084,logos/sources/supplied-package/design-system-source/project/assets/Logos/README.md,source,reference,,,,Untouched source/provenance
+AMA-0085,logos/sources/supplied-package/design-system-source/project/components/Badge/README.md,source,reference,,,,Untouched source/provenance
+AMA-0086,logos/sources/supplied-package/design-system-source/project/components/Badge/preview.html,source,reference,,,,Untouched source/provenance
+AMA-0087,logos/sources/supplied-package/design-system-source/project/components/Button/README.md,source,reference,,,,Untouched source/provenance
+AMA-0088,logos/sources/supplied-package/design-system-source/project/components/Button/preview.html,source,reference,,,,Untouched source/provenance
+AMA-0089,logos/sources/supplied-package/design-system-source/project/components/Card/README.md,source,reference,,,,Untouched source/provenance
+AMA-0090,logos/sources/supplied-package/design-system-source/project/components/Card/preview.html,source,reference,,,,Untouched source/provenance
+AMA-0091,logos/sources/supplied-package/design-system-source/project/components/Cover/preview.html,source,reference,,,,Untouched source/provenance
+AMA-0092,logos/sources/supplied-package/design-system-source/project/components/Nav/README.md,source,reference,,,,Untouched source/provenance
+AMA-0093,logos/sources/supplied-package/design-system-source/project/components/Nav/preview.html,source,reference,,,,Untouched source/provenance
+AMA-0094,logos/sources/supplied-package/design-system-source/project/components/NewsletterSignup/README.md,source,reference,,,,Untouched source/provenance
+AMA-0095,logos/sources/supplied-package/design-system-source/project/components/NewsletterSignup/preview.html,source,reference,,,,Untouched source/provenance
+AMA-0096,logos/sources/supplied-package/design-system-source/project/components/Wordmark/README.md,source,reference,,,,Untouched source/provenance
+AMA-0097,logos/sources/supplied-package/design-system-source/project/components/Wordmark/preview.html,source,reference,,,,Untouched source/provenance
+AMA-0098,logos/sources/supplied-package/design-system-source/project/components/bundle.css,source,reference,,,,Untouched source/provenance
+AMA-0099,logos/sources/supplied-package/design-system-source/project/design-system.json,source,reference,,,,Untouched source/provenance
+AMA-0100,logos/sources/supplied-package/design-system-source/project/governance.md,source,reference,,,,Untouched source/provenance
+AMA-0101,logos/sources/supplied-package/design-system-source/project/tokens.json,source,reference,,,,Untouched source/provenance
+AMA-0102,logos/working/AMA_badge_composition_v001_REVIEW.svg,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0103,logos/working/AMA_lockup-horizontal_composition_v001_REVIEW.svg,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0104,logos/working/AMA_monogram_composition_v001_REVIEW.svg,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0105,logos/working/README.md,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0106,logos/working/build_package.py,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0107,templates/TEMPLATE_MAP.md,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0108,templates/application-proof.html,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0109,tokens/DECISIONS.md,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0110,tokens/supplied-tokens.css,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0111,tokens/supplied-tokens.json,0.1.0,in_review,,,,Internal design review; see PACKAGE_NOTES.md
+AMA-0112,README.md,0.1.0,in_review,,,,Review documentation or static design shell
+AMA-0113,brand/FOUNDATION.md,0.1.0,in_review,,,,Review documentation or static design shell
+AMA-0114,brand/VERIFICATION.md,0.1.0,in_review,,,,Review documentation or static design shell
+AMA-0115,guidelines/APPROVAL.md,0.1.0,in_review,,,,Review documentation or static design shell
+AMA-0116,handoffs/AMA_BRAND_PACKAGE_BRIEF.md,0.1.0,in_review,,,,Review documentation or static design shell
+AMA-0117,handoffs/CLAUDE_DESIGN.md,0.1.0,in_review,,,,Review documentation or static design shell
+AMA-0118,handoffs/IMPORT_INSTRUCTIONS.md,0.1.0,in_review,,,,Review documentation or static design shell
+AMA-0119,logos/README.md,0.1.0,in_review,,,,Review documentation or static design shell
+AMA-0120,logos/working/verify_package.py,0.1.0,in_review,,,,Review documentation or static design shell
+AMA-0121,templates/README.md,0.1.0,in_review,,,,Review documentation or static design shell
+AMA-0122,tokens/README.md,0.1.0,in_review,,,,Review documentation or static design shell
+AMA-0123,AMA Foundations.dc.html,0.2.0,approved,Major Dream Williams,2026-10-31,"Approved by Major Dream Williams in Claude Design session, 31 Oct 2026 (approved for continued design; not a production release)",Visual foundations page
+AMA-0124,AMA Components.dc.html,0.2.0,approved,Major Dream Williams,2026-10-31,"Approved by Major Dream Williams in Claude Design session, 31 Oct 2026 (approved for continued design; not a production release)",Component library
+AMA-0125,AMA Applications.dc.html,0.2.0,approved,Major Dream Williams,2026-10-31,"Approved by Major Dream Williams in Claude Design session, 31 Oct 2026 (approved for continued design; not a production release)",Catalogue, proposal, workspace examples (desktop/phone)
+AMA-0126,AMA Communications.dc.html,0.2.0,approved,Major Dream Williams,2026-10-31,"Approved by Major Dream Williams in Claude Design session, 31 Oct 2026 (approved for continued design; not a production release)",Slide, document and social templates
+AMA-0127,tokens/ama-tokens-v0.2.0.css,0.2.0,approved,Major Dream Williams,2026-10-31,"Approved by Major Dream Williams in Claude Design session, 31 Oct 2026 (approved for continued design; not a production release)",Developer tokens, website + proposed layers
+AMA-0128,tokens/ama-tokens-v0.2.0.json,0.2.0,approved,Major Dream Williams,2026-10-31,"Approved by Major Dream Williams in Claude Design session, 31 Oct 2026 (approved for continued design; not a production release)",Developer tokens, JSON
+AMA-0129,handoffs/COMPONENT_SPECS.md,0.2.0,approved,Major Dream Williams,2026-10-31,"Approved by Major Dream Williams in Claude Design session, 31 Oct 2026 (approved for continued design; not a production release)",Component anatomy and states
+AMA-0130,handoffs/EXPORT_INSTRUCTIONS.md,0.2.0,approved,Major Dream Williams,2026-10-31,"Approved by Major Dream Williams in Claude Design session, 31 Oct 2026 (approved for continued design; not a production release)",Export sizes and asset dependencies
+AMA-0131,brand/DECISIONS_v0.2.0.md,0.2.0,approved,Major Dream Williams,2026-10-31,"Approved by Major Dream Williams in Claude Design session, 31 Oct 2026 (approved for continued design; not a production release)",Established / proposed / unresolved list
+AMA-0132,AMA Onboarding.dc.html,0.2.0,approved,Major Dream Williams,2026-11-01,"Approved by Major Dream Williams in Claude Design session, 1 Nov 2026 ('sounds and looks good'; continued design, not production)",Interactive client onboarding checklist
+AMA-0133,handoffs/RELEASE_NOTES_v0.2.0.md,0.2.0,approved,Major Dream Williams,2026-11-01,"Approved by Major Dream Williams in Claude Design session, 1 Nov 2026 ('sounds and looks good'; continued design, not production)",Release notes
+AMA-0134,handoffs/VECTOR_REDRAW_BRIEF.md,0.2.0,approved,Major Dream Williams,2026-11-01,"Approved by Major Dream Williams in Claude Design session, 1 Nov 2026 ('sounds and looks good'; continued design, not production)",Vector redraw brief
+AMA-0135,AMA Front Door.dc.html,0.2.1,in_review,,,,"Front door intake and routing (strategy update 31 Oct)"
+AMA-0136,AMA Team and Usage.dc.html,0.2.1,in_review,,,,"Art Mob team card and usage/billing states"
+AMA-0137,AMA Applications.dc.html (workspace team/usage/handover),0.2.1,in_review,,,,"Workspace extension"
+AMA-0138,design direction v0.2.0 (all .dc.html pages),0.2.0,approved,Major Dream Williams,2026-11-01,"Founder visual approval of overall design direction, 1 Nov 2026 (""it looks good""). Covers visual design only.",Visual direction only; terms/logos/readiness unchanged

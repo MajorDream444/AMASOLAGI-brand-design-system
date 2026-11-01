@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>AMA SOL AGI — Client onboarding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#080808;color:#FFFFFF;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:#E3BB48;text-underline-offset:3px}
+a:hover{color:#FFFFFF}
+button,input,select{font:inherit}
+:focus-visible{outline:2px solid #C9A227;outline-offset:3px}
+@keyframes amaSpin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
+@media print{body{background:#FFFFFF !important;color:#0A0A0A !important}[data-noprint]{display:none !important}[data-print-card]{background:#FFFFFF !important;border:1px solid #A8A293 !important;color:#0A0A0A !important;break-inside:avoid}[data-print-muted]{color:#5C5850 !important}}
+</style>
+</helmet>
+
+<header data-noprint="" style="border-bottom:1px solid #27272A">
+  <div style="max-width:880px;margin:0 auto;padding:0 24px;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <span style="display:flex;gap:12px;align-items:baseline"><span style="font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:15px">AMA SOL AGI</span><span style="font-size:11px;color:#A1A1AA;letter-spacing:0.08em;text-transform:uppercase">Client onboarding</span></span>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button type="button" onClick="{{ print }}" style="min-height:44px;padding:11px 20px;border:1px solid #71717A;border-radius:9999px;background:transparent;color:#FFFFFF;font-size:12px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;cursor:pointer" style-hover="border-color:#A1A1AA;background:#1C1C1C">Print checklist</button>
+      <button type="button" onClick="{{ reset }}" style="min-height:44px;padding:11px 12px;border:0;background:transparent;color:#E3BB48;font-size:12px;font-weight:600;text-decoration:underline;text-underline-offset:4px;cursor:pointer">Reset demo</button>
+    </div>
+  </div>
+</header>
+
+<main style="max-width:880px;margin:0 auto;padding:48px 24px 80px;display:grid;gap:24px">
+  <div style="display:grid;gap:12px">
+    <p style="margin:0;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C9A227">Halden Physiotherapy · fictional · AMA-O-0007</p>
+    <h1 style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:clamp(32px,5vw,48px);font-weight:500;line-height:1.08;letter-spacing:-0.01em">Before we start</h1>
+    <p data-print-muted="" style="margin:0;color:#A1A1AA;max-width:620px">Complete these before kickoff. Each item names who does it. Consent comes first; nothing else unlocks, and AMA gets no access, until it's done. Progress saves in this browser.</p>
+    <p data-print-muted="" style="margin:0;font-size:12px;color:#A1A1AA">Kickoff: Tue 11 Nov 2026 · 10:00 GST (UTC+4) · 60 min · video call</p>
+  </div>
+
+  <div data-print-card="" style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px;display:grid;gap:10px">
+    <div style="display:flex;justify-content:space-between;gap:12px;font-size:13px;flex-wrap:wrap"><span style="font-weight:600">{{ progressLabel }}</span><span data-print-muted="" style="color:#A1A1AA">{{ progressStatus }}</span></div>
+    <div role="progressbar" aria-label="Onboarding progress" aria-valuemin="0" aria-valuemax="{{ total }}" aria-valuenow="{{ done }}" style="height:8px;border-radius:9999px;background:#242424;overflow:hidden"><div style="{{ barStyle }}"></div></div>
+  </div>
+
+  <section data-print-card="" aria-labelledby="pi-h" style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px;display:grid;gap:14px">
+    <h2 id="pi-h" style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:20px;font-weight:500">Payment and intake</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:8px;font-size:12px">
+      <div style="border:1px solid #27272A;border-radius:12px;padding:10px 12px"><div data-print-muted="" style="color:#A1A1AA">Payment</div><div style="color:#5FB38A;font-weight:600">● Verified · 1 Nov</div></div>
+      <div style="{{ intakeBoxStyle }}"><div data-print-muted="" style="color:#A1A1AA">Intake</div><div style="{{ intakeTextStyle }}">{{ intakeLabel }}</div></div>
+      <div style="border:1px solid #27272A;border-radius:12px;padding:10px 12px"><div data-print-muted="" style="color:#A1A1AA">Source units</div><div>{{ unitsLabel }}</div></div>
+      <div style="border:1px solid #27272A;border-radius:12px;padding:10px 12px"><div data-print-muted="" style="color:#A1A1AA">Delivery date</div><div>{{ deliveryLabel }}</div></div>
+    </div>
+    <ol aria-label="Intake status" style="list-style:none;margin:0;padding:0;display:flex;gap:4px;flex-wrap:wrap;font-size:11px">
+      <sc-for list="{{ intakeSteps }}" as="st" hint-placeholder-count="6"><li aria-current="{{ st.current }}" style="{{ st.style }}">{{ st.icon }} {{ st.label }}</li></sc-for>
+    </ol>
+    <sc-if value="{{ hasMissing }}" hint-placeholder-val="{{ true }}">
+      <div style="border-top:1px solid #27272A;padding-top:12px;display:grid;gap:6px;font-size:12px"><strong style="font-weight:600">Missing before AMA can accept your inputs</strong><ul style="margin:0;padding-left:18px;display:grid;gap:4px"><sc-for list="{{ missing }}" as="m" hint-placeholder-count="3"><li>{{ m }}</li></sc-for></ul><span data-print-muted="" style="color:#A1A1AA">The delivery clock starts only after payment is verified and inputs are accepted.</span></div>
+    </sc-if>
+  </section>
+
+  <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="5">
+    <section data-print-card="" aria-labelledby="{{ sec.hid }}" aria-disabled="{{ sec.locked }}" style="{{ sec.style }}">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap">
+        <h2 id="{{ sec.hid }}" style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:20px;font-weight:500">{{ sec.title }}</h2>
+        <span style="{{ sec.badgeStyle }}">{{ sec.badge }}</span>
+      </div>
+      <ul style="list-style:none;margin:0;padding:0;display:grid">
+        <sc-for list="{{ sec.items }}" as="it" hint-placeholder-count="2">
+          <li style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 16px;align-items:center;padding:12px 0;border-top:1px solid #27272A">
+            <label style="display:flex;gap:12px;align-items:flex-start;min-height:44px;padding-top:10px;font-size:14px;cursor:pointer">
+              <input type="checkbox" checked="{{ it.checked }}" disabled="{{ sec.locked }}" onChange="{{ it.toggle }}" style="width:20px;height:20px;margin:1px 0 0;accent-color:#C9A227;flex:none">
+              <span>{{ it.label }}<span data-print-muted="" style="display:block;font-size:11px;color:#A1A1AA">{{ it.note }}</span></span>
+            </label>
+            <div data-noprint="" style="display:grid;gap:4px;justify-items:end">
+              <label for="{{ it.ownerId }}" style="font-size:11px;color:#A1A1AA">Owner</label>
+              <select id="{{ it.ownerId }}" value="{{ it.owner }}" disabled="{{ sec.locked }}" onChange="{{ it.setOwner }}" style="min-height:44px;padding:8px 12px;background:#080808;color:#FFFFFF;border:1px solid #71717A;border-radius:8px;font-size:12px">
+                <option>Client lead</option><option>Client team</option><option>Client IT</option><option>AMA lead</option><option>Both</option>
+              </select>
+            </div>
+            <sc-if value="{{ it.isUpload }}" hint-placeholder-val="{{ false }}">
+              <div data-noprint="" style="grid-column:1 / -1;display:grid;gap:8px">
+                <sc-if value="{{ it.upIdle }}" hint-placeholder-val="{{ true }}">
+                  <label style="{{ it.dropStyle }}"><input type="file" multiple="" disabled="{{ sec.locked }}" onChange="{{ it.onFiles }}" style="position:absolute;width:1px;height:1px;opacity:0"><span aria-hidden="true">↑</span><span>Choose files <span style="color:#A1A1AA">· PDF, DOCX, CSV · up to 25 MB each</span></span></label>
+                </sc-if>
+                <sc-for list="{{ it.files }}" as="f" hint-placeholder-count="0">
+                  <div role="status" style="{{ f.style }}">
+                    <span aria-hidden="true" style="{{ f.iconStyle }}">{{ f.icon }}</span>
+                    <span style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ f.name }}</span>
+                    <span style="{{ f.statusStyle }}">{{ f.status }}</span>
+                    <sc-if value="{{ f.failed }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ f.retry }}" style="min-height:36px;padding:6px 14px;border:1px solid #71717A;border-radius:9999px;background:transparent;color:#FFFFFF;font-size:11px;font-weight:600;text-transform:uppercase;cursor:pointer">Retry</button></sc-if>
+                    <sc-if value="{{ f.removable }}" hint-placeholder-val="{{ false }}"><button type="button" aria-label="{{ f.removeLabel }}" onClick="{{ f.remove }}" style="width:36px;height:36px;border:0;background:transparent;color:#A1A1AA;cursor:pointer;border-radius:8px">×</button></sc-if>
+                  </div>
+                </sc-for>
+                <sc-if value="{{ it.hasFiles }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ it.addFail }}" style="justify-self:start;min-height:36px;padding:4px 0;border:0;background:transparent;color:#A1A1AA;font-size:11px;text-decoration:underline;cursor:pointer">Demo: simulate a failed upload</button></sc-if>
+                <span style="font-size:11px;color:#A1A1AA">Demo only. Files stay in this browser tab and are not sent anywhere.</span>
+              </div>
+            </sc-if>
+          </li>
+        </sc-for>
+      </ul>
+      <sc-if value="{{ sec.locked }}" hint-placeholder-val="{{ false }}"><p style="margin:0;font-size:12px;color:#A1A1AA">○ Locked until section 1 is complete.</p></sc-if>
+    </section>
+  </sc-for>
+
+  <sc-if value="{{ allDone }}" hint-placeholder-val="{{ false }}">
+    <div role="status" data-print-card="" style="border:1px solid #5FB38A;background:rgba(95,179,138,0.06);border-radius:32px;padding:24px;display:grid;gap:6px">
+      <strong style="color:#5FB38A;font-weight:600">● Ready for kickoff</strong>
+      <span data-print-muted="" style="font-size:13px;color:#A1A1AA">Your AMA lead has what they need. See you Tue 11 Nov, 10:00 GST.</span>
+    </div>
+  </sc-if>
+
+  <div data-print-card="" style="background:#1C1C1C;border:1px solid #27272A;border-radius:32px;padding:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px">
+    <span>Questions? Your AMA lead: [Name] · info@amasolagi.com</span><span data-print-muted="" style="color:#A1A1AA">Replies within [confirm] working days</span>
+  </div>
+  <p data-print-muted="" style="margin:0;font-size:11px;color:#A1A1AA">AMA Solutions Corporation (legal name to verify) · amasolagi.com · <a href="https://amasolagi.com/terms">Terms</a> · <a href="https://amasolagi.com/privacy">Privacy</a> · <a href="https://amasolagi.com/support">Support</a> (review drafts, ama-*-2026-10-30-draft.1).</p>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const KEY = 'ama-onboarding-v1';
+const SECTIONS = [
+  { title: '1 · Consent and agreement', items: [
+    { id: 'agree', label: 'Signed agreement on file', note: 'Your accepted proposal or statement of work', owner: 'Client lead' },
+    { id: 'data', label: 'Data handling consent confirmed', note: 'Covers the sources you share below', owner: 'Client lead' }] },
+  { title: '2 · Goals', items: [
+    { id: 'wf', label: 'Name the one workflow this engagement covers', note: 'e.g. new-patient intake', owner: 'Client lead' },
+    { id: 'done', label: 'Describe what "done" looks like in your words', note: 'Two or three sentences is enough', owner: 'Client lead' }] },
+  { title: '3 · Sources', items: [
+    { id: 'up', label: 'Upload FAQs, templates or past messages you reuse', note: 'Remove anything you would not share with a contractor', owner: 'Client team', upload: true },
+    { id: 'conf', label: 'Mark anything confidential or off-limits', note: 'AMA will not open marked files', owner: 'Client lead' }] },
+  { title: '4 · Access and permissions', items: [
+    { id: 'acc', label: 'Grant read access to the shared inbox, with an end date', note: 'Read-only; you can revoke it at any time', owner: 'Client IT' },
+    { id: 'appr', label: 'List who in your team can approve decisions', note: 'Shown in the workspace approvals panel', owner: 'Client lead' }] },
+  { title: '5 · Kickoff', items: [
+    { id: 'att', label: 'Confirm attendees and calendar invite received', note: 'Tue 11 Nov · 10:00 GST', owner: 'Both' },
+    { id: 'scope', label: 'Read the scope document once more', note: 'AMA-S-0007 · Draft v0.3', owner: 'Client lead' }] }
+];
+class Component extends DCLogic {
+  state = this.load();
+  load() {
+    try { const s = JSON.parse(localStorage.getItem(KEY)); if (s) return { checked: s.checked || {}, owners: s.owners || {}, files: (s.files || []).map(f => ({ ...f, st: f.st === 'uploading' ? 'done' : f.st })) }; } catch (e) {}
+    return { checked: {}, owners: {}, files: [] };
+  }
+  componentDidUpdate() { try { localStorage.setItem(KEY, JSON.stringify(this.state)); } catch (e) {} }
+  upload(names, fail) {
+    const add = names.map((name, i) => ({ id: Date.now() + '-' + i, name, st: 'uploading', fail }));
+    this.setState(s => ({ files: [...s.files, ...add] }));
+    add.forEach(f => setTimeout(() => this.setState(s => ({ files: s.files.map(x => x.id === f.id ? { ...x, st: x.fail ? 'failed' : 'done' } : x) })), 1400));
+  }
+  renderVals() {
+    const s = this.state;
+    const consentDone = SECTIONS[0].items.every(i => s.checked[i.id]);
+    const all = SECTIONS.flatMap(x => x.items);
+    const done = all.filter(i => s.checked[i.id]).length;
+    const total = all.length;
+    const sections = SECTIONS.map((sec, si) => {
+      const locked = si > 0 && !consentDone;
+      const n = sec.items.filter(i => s.checked[i.id]).length;
+      const complete = n === sec.items.length;
+      const badge = locked ? '○ Locked' : complete ? '● Complete' : n ? `◐ ${n} of ${sec.items.length}` : '○ Not started';
+      const color = locked ? '#A1A1AA' : complete ? '#5FB38A' : n ? '#E3BB48' : '#A1A1AA';
+      return {
+        hid: 'sec-' + si, title: sec.title, locked, badge,
+        badgeStyle: { fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color },
+        style: { background: locked ? '#0F0F0F' : '#151515', border: locked ? '1px dashed #3F3F46' : complete ? '1px solid #5FB38A' : '1px solid #27272A', borderRadius: 32, padding: 24, display: 'grid', gap: 12, opacity: locked ? 0.7 : 1 },
+        items: sec.items.map(it => {
+          const files = it.upload ? s.files.map(f => {
+            const m = { uploading: ['', '#E3BB48', 'Uploading…'], done: ['●', '#5FB38A', 'Uploaded'], failed: ['■', '#E07A6E', "Couldn't upload. Check the file and retry."] }[f.st];
+            return { name: f.name, status: m[2], icon: m[0], failed: f.st === 'failed', removable: f.st !== 'uploading', removeLabel: 'Remove ' + f.name,
+              iconStyle: f.st === 'uploading' ? { width: 14, height: 14, border: '2px solid #E3BB48', borderRightColor: 'transparent', borderRadius: '50%', animation: 'amaSpin 800ms linear infinite', display: 'inline-block' } : { color: m[1] },
+              statusStyle: { fontSize: 11, color: m[1] },
+              style: { display: 'grid', gridTemplateColumns: '20px minmax(0,1fr) auto auto auto', gap: 10, alignItems: 'center', padding: '8px 12px', borderRadius: 8, border: f.st === 'failed' ? '1px solid #E07A6E' : '1px solid #27272A', fontSize: 12 },
+              retry: () => { this.setState(st => ({ files: st.files.map(x => x.id === f.id ? { ...x, st: 'uploading', fail: false } : x) })); setTimeout(() => this.setState(st => ({ files: st.files.map(x => x.id === f.id ? { ...x, st: 'done' } : x) })), 1400); },
+              remove: () => this.setState(st => ({ files: st.files.filter(x => x.id !== f.id) })) };
+          }) : [];
+          return {
+            label: it.label, note: it.note, checked: !!s.checked[it.id], ownerId: 'own-' + it.id, owner: s.owners[it.id] || it.owner,
+            toggle: () => this.setState(st => ({ checked: { ...st.checked, [it.id]: !st.checked[it.id] } })),
+            setOwner: e => { const v = e.target.value; this.setState(st => ({ owners: { ...st.owners, [it.id]: v } })); },
+            isUpload: !!it.upload, upIdle: true, files, hasFiles: files.length > 0,
+            dropStyle: { position: 'relative', display: 'flex', gap: 10, alignItems: 'center', minHeight: 56, padding: '12px 16px', border: '1px dashed #71717A', borderRadius: 16, fontSize: 13, cursor: locked ? 'not-allowed' : 'pointer' },
+            onFiles: e => { const names = [...e.target.files].map(f => f.name); e.target.value = ''; if (names.length) this.upload(names, false); },
+            addFail: () => this.upload(['inbox-export-corrupt.zip'], true)
+          };
+        })
+      };
+    });
+    const missingItems = all.filter(i => !s.checked[i.id]).map(i => i.label);
+    const goodFiles = s.files.filter(f => f.st === 'done').length;
+    const badFiles = s.files.some(f => f.st === 'failed');
+    if (badFiles) missingItems.unshift('Re-upload the file that failed');
+    const ready = missingItems.length === 0;
+    const ist = !consentDone ? 'submitted' : ready ? 'accepted' : 'more';
+    const ORDER = [['submitted', 'Submitted'], ['review', 'Under review'], ['more', 'More information needed'], ['accepted', 'Inputs accepted'], ['production', 'In production'], ['inreview', 'In review'], ['delivered', 'Delivered']];
+    const idx = { submitted: 0, review: 1, more: 2, accepted: 3 }[ist];
+    const intakeSteps = ORDER.filter(([k]) => k !== 'more' || ist === 'more').map(([k, label]) => {
+      const i = ORDER.findIndex(o => o[0] === k), now = k === ist, done = !now && i < idx && k !== 'more';
+      const col = now ? (k === 'more' ? '#D98E3A' : k === 'accepted' ? '#5FB38A' : '#E3BB48') : done ? '#5FB38A' : '#A1A1AA';
+      return { label, current: now ? 'step' : 'false', icon: now ? (k === 'more' ? '○' : k === 'accepted' ? '●' : '◐') : done ? '●' : '○', style: { padding: '4px 10px', borderRadius: 9999, color: col, border: now ? '1px solid ' + col : done ? '1px solid #27272A' : '1px dashed #3F3F46' } };
+    });
+    const iCol = ist === 'more' ? '#D98E3A' : ist === 'accepted' ? '#5FB38A' : '#E3BB48';
+    const intakeVals = {
+      intakeSteps, missing: missingItems.slice(0, 4).concat(missingItems.length > 4 ? ['and ' + (missingItems.length - 4) + ' more below'] : []), hasMissing: !ready,
+      intakeLabel: { submitted: '◐ Submitted · consent needed', more: '○ More information needed', accepted: '● Inputs accepted' }[ist],
+      intakeTextStyle: { color: iCol, fontWeight: 600 },
+      intakeBoxStyle: { border: ist === 'more' ? '1px dashed #D98E3A' : '1px solid #27272A', borderRadius: 12, padding: '10px 12px' },
+      unitsLabel: ready ? '5 of 10 confirmed by reviewer' : goodFiles + ' file' + (goodFiles === 1 ? '' : 's') + ' uploaded · confirmed at review',
+      deliveryLabel: ready ? 'Kickoff Tue 11 Nov · 10:00 GST' : 'Set when inputs are accepted'
+    };
+    return {
+      ...intakeVals,
+      sections, done, total, allDone: done === total,
+      progressLabel: `${done} of ${total} complete`,
+      progressStatus: !consentDone ? 'Start with consent' : done === total ? 'Ready for kickoff' : 'In progress · saved in this browser',
+      barStyle: { width: (done / total * 100) + '%', height: '100%', background: '#C9A227', borderRadius: 9999, transition: 'width 250ms cubic-bezier(0.16,1,0.3,1)' },
+      print: () => window.print(),
+      reset: () => this.setState({ checked: {}, owners: {}, files: [] })
+    };
+  }
+}
+</script>
+</body>
+</html>

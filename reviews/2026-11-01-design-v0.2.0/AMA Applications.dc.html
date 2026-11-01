@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>AMA SOL AGI — Applications (in_review)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#080808;color:#FFFFFF;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:#E3BB48;text-decoration:underline;text-underline-offset:3px}
+a:hover{color:#FFFFFF}
+button,input,select,textarea{font:inherit}
+:focus-visible{outline:2px solid #C9A227;outline-offset:3px}
+@keyframes amaPulse{0%,100%{opacity:.45}50%{opacity:.9}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:10;border-bottom:1px solid #27272A;background:rgba(8,8,8,0.94);backdrop-filter:blur(8px)">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <a href="AMA Foundations.dc.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#FFFFFF"><span style="font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:15px;letter-spacing:-0.01em">AMA SOL AGI</span><span style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#A1A1AA">Design system v0.2.0</span></a>
+    <nav aria-label="Design system" style="display:flex;gap:4px;flex-wrap:wrap">
+      <a href="AMA Foundations.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Foundations</a>
+      <a href="AMA Components.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Components</a>
+      <a href="AMA Applications.dc.html" aria-current="page" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;font-weight:600;color:#E3BB48;text-decoration:none;background:rgba(201,162,39,0.08);border:1px solid rgba(201,162,39,0.2)">Applications</a>
+      <a href="AMA Front Door.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Front door</a>
+      <a href="AMA Team and Usage.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Team and usage</a>
+      <a href="AMA Communications.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Communications</a>
+      <a href="AMA Onboarding.dc.html" style="padding:6px 14px;border-radius:9999px;font-size:12px;letter-spacing:0.04em;color:#A1A1AA;text-decoration:none;border:1px solid transparent">Onboarding</a>
+    </nav>
+    <span style="display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:rgba(201,162,39,0.1);border:1px solid rgba(201,162,39,0.3);color:#E3BB48"><span aria-hidden="true">●</span>Approved · design base</span>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:10px 24px 14px;display:flex;gap:24px;flex-wrap:wrap;align-items:center">
+    <div role="group" aria-label="Application" style="display:flex;gap:4px;flex-wrap:wrap">
+      <sc-for list="{{ appTabs }}" as="t" hint-placeholder-count="3"><button type="button" aria-pressed="{{ t.on }}" onClick="{{ t.pick }}" style="{{ t.style }}">{{ t.label }}</button></sc-for>
+    </div>
+    <div role="group" aria-label="Viewport" style="display:flex;gap:4px">
+      <sc-for list="{{ viewTabs }}" as="t" hint-placeholder-count="2"><button type="button" aria-pressed="{{ t.on }}" onClick="{{ t.pick }}" style="{{ t.style }}">{{ t.label }}</button></sc-for>
+    </div>
+    <div role="group" aria-label="Data state" style="display:flex;gap:4px;flex-wrap:wrap">
+      <sc-for list="{{ stateTabs }}" as="t" hint-placeholder-count="4"><button type="button" aria-pressed="{{ t.on }}" onClick="{{ t.pick }}" style="{{ t.style }}">{{ t.label }}</button></sc-for>
+    </div>
+  </div>
+</header>
+
+<main style="padding:32px 24px 80px;display:flex;justify-content:center">
+  <div style="{{ frameStyle }}">
+
+  <sc-if value="{{ isCatalogue }}" hint-placeholder-val="{{ true }}">
+    <div data-screen-label="A Catalogue" style="background:#080808">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:64px;padding:0 24px;border-bottom:1px solid #27272A">
+        <span style="font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:15px">AMA SOL AGI</span>
+        <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+          <nav aria-label="Site" style="display:flex;gap:4px"><a href="#" style="padding:6px 14px;border-radius:9999px;font-size:12px;color:#A1A1AA;text-decoration:none">Services</a><a href="#" aria-current="page" style="padding:6px 14px;border-radius:9999px;font-size:12px;font-weight:600;color:#E3BB48;text-decoration:none;background:rgba(201,162,39,0.08);border:1px solid rgba(201,162,39,0.2)">Resources</a><a href="#" style="padding:6px 14px;border-radius:9999px;font-size:12px;color:#A1A1AA;text-decoration:none">How we work</a></nav>
+        </sc-if>
+        <sc-if value="{{ isPhone }}" hint-placeholder-val="{{ false }}"><button type="button" aria-label="Open menu" style="width:44px;height:44px;border:0;background:transparent;color:#FFFFFF;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button></sc-if>
+      </div>
+      <div style="padding:48px 24px 32px;max-width:1200px;margin:0 auto">
+        <p style="margin:0 0 12px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C9A227">Resources and offers</p>
+        <h1 style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:clamp(32px,4.5vw,52px);font-weight:500;line-height:1.06;letter-spacing:-0.015em;max-width:760px;text-wrap:balance">Build from what you already know.</h1>
+        <p style="margin:16px 0 0;max-width:600px;color:#A1A1AA;font-size:14px">Twelve one-time services, six monthly packages and two consulting offers. Implementation is quoted separately after analysis. Readiness and availability are shown apart from price.</p>
+        <div role="group" aria-label="Filter by type" style="margin-top:28px;display:flex;gap:8px;flex-wrap:wrap">
+          <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5"><button type="button" aria-pressed="{{ f.on }}" onClick="{{ f.pick }}" style="{{ f.style }}">{{ f.label }} <span style="opacity:0.7">{{ f.count }}</span></button></sc-for>
+        </div>
+        <p role="status" style="margin:16px 0 0;font-size:12px;color:#A1A1AA">{{ resultText }}</p>
+        <details style="margin-top:16px;border:1px solid #27272A;border-radius:16px;padding:0 16px;font-size:12px;color:#A1A1AA">
+          <summary style="min-height:44px;display:flex;align-items:center;cursor:pointer;color:#FFFFFF;font-weight:600">Terms that apply to every offer</summary>
+          <ul style="margin:0 0 16px;padding-left:18px;display:grid;gap:6px">
+            <li><span style="color:#FFFFFF">Source unit:</span> one document up to 20 pages, one transcript up to 30 minutes, or one article up to 5,000 words. Larger sources count as several units.</li>
+            <li><span style="color:#FFFFFF">Scope:</span> one agreed topic, audience and language unless stated otherwise.</li>
+            <li><span style="color:#FFFFFF">Delivery:</span> private download or restricted folder with email notice. Turnaround starts after payment and complete inputs.</li>
+            <li><span style="color:#FFFFFF">Support:</span> one consolidated revision within 7 calendar days. AMA factual errors corrected free. New topics or sources need separate scope.</li>
+            <li><span style="color:#FFFFFF">Human review:</span> AMA reviews every deliverable before release. Recommendations show evidence, assumptions and open questions.</li>
+            <li><span style="color:#FFFFFF">Monthly packages:</span> prepaid, renew on the billing anniversary, cancel before renewal to stop future charges. No setup fee or annual commitment. One request active at a time. Missed accepted work is completed or proportionally refunded.</li>
+            <li><span style="color:#FFFFFF">Cancelling a one-time service (draft, pending final policy review):</span> cancel before AMA accepts your inputs and begins work for a full refund. After work begins, cancellation is assessed against completed work and documented nonrecoverable costs; any unearned balance is refunded. If AMA cannot complete the agreed scope, we agree a revised delivery date or refund the undelivered portion. Included revisions and factual corrections remain available. </li>
+            <li><span style="color:#FFFFFF">Consulting sessions (draft for review, not active):</span> reschedule once at no charge up to 48 hours before the start time. Cancel up to 48 hours before for a full refund. Within 48 hours, or if you don't attend, the session fee is not refunded, but preparation notes are still sent. If AMA reschedules or cancels, you choose a new time or a full refund.</li>
+            <li><span style="color:#FFFFFF">Release stages:</span> launch candidate, limited pilot, waitlist and planned describe readiness. Purchase stays closed for every offer until checkout and policies are live.</li>
+            <li><span style="color:#FFFFFF">When the clock starts:</span> delivery time counts from verified payment and accepted complete inputs. You'll see payment and intake status separately, and get a confirmation when inputs are accepted.</li>
+            <li><span style="color:#FFFFFF">Offers with video</span> stay unavailable until a representative production run is recorded.</li>
+            <li>◇ marks proposed operational targets awaiting approval. Publish only once customer policies and billing settings match.</li>
+          </ul>
+        </details>
+      </div>
+
+      <div style="padding:0 24px 32px;max-width:1200px;margin:0 auto">
+        <sc-if value="{{ showLoading }}" hint-placeholder-val="{{ false }}">
+          <div aria-busy="true" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:16px">
+            <sc-for list="{{ three }}" as="x" hint-placeholder-count="3"><div style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px;display:grid;gap:12px;min-height:300px;align-content:start"><span style="height:10px;width:35%;background:#242424;border-radius:4px;animation:amaPulse 1.6s ease-in-out infinite"></span><span style="height:22px;width:70%;background:#242424;border-radius:4px;animation:amaPulse 1.6s ease-in-out infinite"></span><span style="height:10px;width:95%;background:#242424;border-radius:4px;animation:amaPulse 1.6s ease-in-out infinite"></span><span style="height:10px;width:80%;background:#242424;border-radius:4px;animation:amaPulse 1.6s ease-in-out infinite"></span></div></sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
+          <div role="alert" style="background:#151515;border:1px solid #E07A6E;border-radius:32px;padding:32px;display:grid;gap:8px;justify-items:start"><span aria-hidden="true" style="color:#E07A6E">■</span><strong style="font-weight:600">The catalogue didn't load.</strong><span style="font-size:13px;color:#A1A1AA">Nothing has been charged. Try again, or email info@amasolagi.com.</span><button type="button" onClick="{{ toPopulated }}" style="min-height:44px;padding:11px 23px;border:1px solid #71717A;border-radius:9999px;background:transparent;color:#FFFFFF;font-size:13px;font-weight:600;text-transform:uppercase;cursor:pointer">Try again</button></div>
+        </sc-if>
+        <sc-if value="{{ showEmptyCat }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#151515;border:1px dashed #3F3F46;border-radius:32px;padding:32px;display:grid;gap:8px;justify-items:start"><span aria-hidden="true" style="color:#A1A1AA">○</span><strong style="font-weight:600">Nothing listed here yet.</strong><span style="font-size:13px;color:#A1A1AA">New resources are published once they're tested. Tell us what you need and we'll reply directly.</span><a href="#" style="font-size:13px;font-weight:600">Start a conversation</a></div>
+        </sc-if>
+        <sc-if value="{{ showItems }}" hint-placeholder-val="{{ true }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:16px">
+            <sc-for list="{{ items }}" as="p" hint-placeholder-count="6">
+              <article style="{{ p.cardStyle }}">
+                <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><span style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C9A227">{{ p.kind }}</span><span style="font-size:11px;color:#A1A1AA">{{ p.status }}</span></div>
+                <div><h2 style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:22px;font-weight:500;line-height:1.2">{{ p.name }}</h2><p style="margin:6px 0 0;font-size:13px;color:#A1A1AA;text-wrap:pretty">{{ p.outcome }}</p></div>
+                <dl style="margin:0;display:grid;grid-template-columns:96px 1fr;gap:6px 12px;font-size:12px">
+                  <sc-for list="{{ p.rows }}" as="r" hint-placeholder-count="3"><dt style="color:#A1A1AA">{{ r.k }}</dt><dd style="margin:0">{{ r.v }}</dd></sc-for>
+                </dl>
+                <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #27272A;flex-wrap:wrap">
+                  <div><div style="font-family:Inter,system-ui,sans-serif;font-size:20px;font-weight:500">{{ p.price }}</div><div style="font-size:11px;color:#A1A1AA">{{ p.priceNote }}</div></div>
+                  <a href="#" style="{{ p.ctaStyle }}">{{ p.cta }}</a>
+                </div>
+              </article>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+      <div style="padding:24px;border-top:1px solid #27272A;font-size:11px;color:#A1A1AA;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><span>AMA Solutions Corporation (legal name to verify) · amasolagi.com</span><span>Working launch prices in USD, from AMA Strategy and Offers (30 Oct 2026). Three bundle/download records remain held. No checkout connected.</span></div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isProposal }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="B Proposal" style="background:#E7E3DA;padding:24px 16px">
+      <article style="max-width:860px;margin:0 auto;background:#F5F2EA;color:#0A0A0A;border-radius:16px;overflow:hidden;font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:16px;line-height:1.55">
+        <div style="background:#0A0A0A;color:#FFFFFF;padding:40px 32px;display:flex;justify-content:space-between;gap:24px;align-items:flex-start;flex-wrap:wrap">
+          <div style="flex:1 1 320px">
+            <p style="margin:0 0 32px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#D6AD62">Proposal · AMA-P-0007 · Draft v0.3</p>
+            <h1 style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:clamp(32px,5vw,44px);font-weight:600;line-height:1.1;letter-spacing:-0.01em;text-wrap:balance">A clearer client intake for Halden Physiotherapy</h1>
+            <p style="margin:16px 0 0;color:#A1A1AA;font-size:15px">Prepared for R. Mensah, Practice Lead · Prepared by AMA SOL AGI · 29 Oct 2026</p>
+          </div>
+          <img src="logos/review/AMA_Badge_512x512_EN_v001_REVIEW.png" alt="AMA SOL AGI badge" style="width:112px;height:112px;flex:none">
+        </div>
+        <div style="padding:8px 32px;background:#171717;color:#A1A1AA;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;display:flex;gap:16px;flex-wrap:wrap"><span>Fictional client</span><span>·</span><span>Badge on dark uses in_review cut-out</span><span>·</span><span>Valid until [confirm]</span></div>
+
+        <div style="padding:40px 32px;display:grid;gap:40px">
+          <section style="display:grid;gap:12px">
+            <p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#7A5418">01 · Executive overview</p>
+            <p style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:22px;line-height:1.4;text-wrap:pretty">New patients currently reach Halden by phone, email and a web form, and the front desk re-enters the same details three times. We propose a single intake workflow, reviewed by a named person at Halden before anything reaches a clinician.</p>
+          </section>
+
+          <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px">
+            <div style="border-top:2px solid #9B6B22;padding-top:12px"><h2 style="margin:0 0 6px;font-size:18px;font-weight:600">Problem</h2><p style="margin:0;font-size:15px;color:#3A3730">Duplicate entry, missed referral details, and no record of who checked each intake.</p></div>
+            <div style="border-top:2px solid #9B6B22;padding-top:12px"><h2 style="margin:0 0 6px;font-size:18px;font-weight:600">Intended outcome</h2><p style="margin:0;font-size:15px;color:#3A3730">One intake path with a human review step and a log of each decision. Not a guarantee of time saved.</p></div>
+            <div style="border-top:2px solid #9B6B22;padding-top:12px"><h2 style="margin:0 0 6px;font-size:18px;font-weight:600">Scope</h2><p style="margin:0;font-size:15px;color:#3A3730">New-patient intake only. Existing patient records, billing and clinical notes are out of scope.</p></div>
+          </section>
+
+          <section style="display:grid;gap:16px">
+            <p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#7A5418">02 · Deliverables and exclusions</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px">
+              <div style="background:#FFFFFF;border:1px solid #D8D3C7;border-radius:16px;padding:20px"><h3 style="margin:0 0 10px;font-size:16px;font-weight:600">Included</h3><ul style="margin:0;padding-left:18px;font-size:15px;display:grid;gap:6px"><li>Source and requirements map</li><li>Intake question set, reviewed with you</li><li>Workflow prototype with human review step</li><li>Handover notes and a 30-minute walkthrough</li></ul></div>
+              <div style="background:#FFFFFF;border:1px dashed #A8A293;border-radius:16px;padding:20px"><h3 style="margin:0 0 10px;font-size:16px;font-weight:600">Not included</h3><ul style="margin:0;padding-left:18px;font-size:15px;display:grid;gap:6px;color:#3A3730"><li>Hosting or third-party software licences</li><li>Changes to clinical systems</li><li>Ongoing support after handover [optional add-on]</li></ul></div>
+            </div>
+          </section>
+
+          <section style="display:grid;gap:16px">
+            <p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#7A5418">03 · Milestones and responsibilities</p>
+            <div style="overflow-x:auto">
+              <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:520px">
+                <thead><tr style="text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#5C5850"><th scope="col" style="padding:10px 8px;border-bottom:2px solid #0A0A0A;font-weight:600">Phase</th><th scope="col" style="padding:10px 8px;border-bottom:2px solid #0A0A0A;font-weight:600">Deliverable</th><th scope="col" style="padding:10px 8px;border-bottom:2px solid #0A0A0A;font-weight:600">Owner</th><th scope="col" style="padding:10px 8px;border-bottom:2px solid #0A0A0A;font-weight:600">Target</th></tr></thead>
+                <tbody>
+                  <tr><td style="padding:12px 8px;border-bottom:1px solid #D8D3C7;font-weight:600">1 Understand</td><td style="padding:12px 8px;border-bottom:1px solid #D8D3C7">Source and requirements map</td><td style="padding:12px 8px;border-bottom:1px solid #D8D3C7">AMA lead</td><td style="padding:12px 8px;border-bottom:1px solid #D8D3C7;color:#5C5850">Week 1–2</td></tr>
+                  <tr><td style="padding:12px 8px;border-bottom:1px solid #D8D3C7;font-weight:600">2 Build</td><td style="padding:12px 8px;border-bottom:1px solid #D8D3C7">Question set and prototype</td><td style="padding:12px 8px;border-bottom:1px solid #D8D3C7">AMA lead</td><td style="padding:12px 8px;border-bottom:1px solid #D8D3C7;color:#5C5850">Week 3–4</td></tr>
+                  <tr><td style="padding:12px 8px;border-bottom:1px solid #D8D3C7;font-weight:600">3 Validate</td><td style="padding:12px 8px;border-bottom:1px solid #D8D3C7">Review with front desk</td><td style="padding:12px 8px;border-bottom:1px solid #D8D3C7">Client lead</td><td style="padding:12px 8px;border-bottom:1px solid #D8D3C7;color:#5C5850">Week 5</td></tr>
+                  <tr><td style="padding:12px 8px;font-weight:600">4 Handover</td><td style="padding:12px 8px">Notes and walkthrough</td><td style="padding:12px 8px">Both</td><td style="padding:12px 8px;color:#5C5850">Week 6</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="background:#EDE8DC;border-radius:16px;padding:16px 20px;font-size:14px"><strong style="font-weight:600">Dependencies.</strong> Read access to the current web form and shared inbox by week 1. Two front-desk staff available for a 45-minute review in week 5. Delays here move later milestones.</div>
+          </section>
+
+          <section style="display:grid;gap:16px">
+            <p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#7A5418">04 · Fees</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px">
+              <div style="border:1px dashed #A8A293;border-radius:16px;padding:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#5C5850;text-transform:uppercase;letter-spacing:0.08em">Project fee</div><div style="font-family:'Source Serif 4',Georgia,serif;font-size:28px;font-weight:600">[Amount]</div></div>
+              <div style="border:1px dashed #A8A293;border-radius:16px;padding:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#5C5850;text-transform:uppercase;letter-spacing:0.08em">Payment schedule</div><div style="font-size:15px;margin-top:6px">[e.g. 50% on acceptance, 50% at handover]</div></div>
+              <div style="border:1px dashed #A8A293;border-radius:16px;padding:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#5C5850;text-transform:uppercase;letter-spacing:0.08em">Currency · tax</div><div style="font-size:15px;margin-top:6px">[Confirm]</div></div>
+            </div>
+          </section>
+
+          <section style="background:#0A0A0A;color:#FFFFFF;border-radius:16px;padding:24px;display:grid;gap:12px">
+            <p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#D6AD62">05 · Next step</p>
+            <p style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:22px;line-height:1.35">Review the scope. If it's right, accept the proposal. We then send an invoice, and book the kickoff once payment clears.</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px"><a href="#" style="min-height:44px;padding:12px 24px;border-radius:9999px;background:#C9A227;color:#080808;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center">Review and accept</a><a href="#" style="min-height:44px;padding:11px 23px;border-radius:9999px;border:1px solid #71717A;color:#FFFFFF;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center">Ask a question</a></div>
+            <p style="margin:0;font-size:12px;color:#A1A1AA">Accepting is not payment and does not book a date. Acceptance flow not connected in this proof.</p>
+          </section>
+        </div>
+        <div style="padding:16px 32px;border-top:1px solid #D8D3C7;font-family:'JetBrains Mono',monospace;font-size:11px;color:#5C5850;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><span>AMA Solutions Corporation (legal name to verify) · amasolagi.com</span><span>Terms: amasolagi.com/terms (review draft)</span><span>Page 1 of 1</span></div>
+      </article>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isWorkspace }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="C Workspace" style="background:#080808">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:64px;padding:0 24px;border-bottom:1px solid #27272A;flex-wrap:wrap">
+        <div style="display:flex;gap:12px;align-items:center"><span style="font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:15px">AMA SOL AGI</span><span style="font-size:11px;color:#A1A1AA;letter-spacing:0.08em;text-transform:uppercase">Client workspace</span></div>
+        <div style="display:flex;gap:8px;align-items:center;font-size:12px;color:#A1A1AA"><span aria-hidden="true" style="width:32px;height:32px;border-radius:50%;background:#242424;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:11px">RM</span><sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}"><span>R. Mensah · Client lead</span></sc-if></div>
+      </div>
+
+      <div style="padding:32px 24px;max-width:1200px;margin:0 auto;display:grid;gap:24px">
+        <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-end;flex-wrap:wrap">
+          <div>
+            <p style="margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C9A227">Halden Physiotherapy · fictional</p>
+            <h1 style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:clamp(28px,4vw,40px);font-weight:500;line-height:1.1;letter-spacing:-0.01em">Client intake workflow</h1>
+          </div>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:rgba(201,162,39,0.1);border:1px solid rgba(201,162,39,0.3);color:#E3BB48"><span aria-hidden="true">◐</span>Stage 2 of 4 · Build</span>
+        </div>
+
+        <ol aria-label="Project stages" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:6px">
+          <li style="display:grid;gap:6px"><span style="height:6px;border-radius:9999px;background:#C9A227"></span><span style="font-size:11px;color:#A1A1AA">✓ Understand</span></li>
+          <li aria-current="step" style="display:grid;gap:6px"><span style="height:6px;border-radius:9999px;background:linear-gradient(90deg,#C9A227 55%,#242424 55%)"></span><span style="font-size:11px;color:#E3BB48;font-weight:600">◐ Build</span></li>
+          <li style="display:grid;gap:6px"><span style="height:6px;border-radius:9999px;background:#242424"></span><span style="font-size:11px;color:#A1A1AA">○ Validate</span></li>
+          <li style="display:grid;gap:6px"><span style="height:6px;border-radius:9999px;background:#242424"></span><span style="font-size:11px;color:#A1A1AA">○ Handover</span></li>
+        </ol>
+
+        <sc-if value="{{ showLoading }}" hint-placeholder-val="{{ false }}">
+          <div aria-busy="true" style="display:grid;gap:16px"><div style="height:180px;border-radius:32px;background:#151515;border:1px solid #27272A;animation:amaPulse 1.6s ease-in-out infinite"></div><div style="height:260px;border-radius:32px;background:#151515;border:1px solid #27272A;animation:amaPulse 1.6s ease-in-out infinite"></div><span style="font-size:12px;color:#A1A1AA">Loading your workspace…</span></div>
+        </sc-if>
+        <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
+          <div role="alert" style="background:#151515;border:1px solid #E07A6E;border-radius:32px;padding:32px;display:grid;gap:8px;justify-items:start"><span aria-hidden="true" style="color:#E07A6E">■</span><strong style="font-weight:600">We couldn't load this workspace.</strong><span style="font-size:13px;color:#A1A1AA">Your approvals and uploads are saved. If this continues, contact your AMA lead.</span><button type="button" onClick="{{ toPopulated }}" style="min-height:44px;padding:11px 23px;border:1px solid #71717A;border-radius:9999px;background:transparent;color:#FFFFFF;font-size:13px;font-weight:600;text-transform:uppercase;cursor:pointer">Try again</button></div>
+        </sc-if>
+        <sc-if value="{{ showEmptyWs }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#151515;border:1px dashed #3F3F46;border-radius:32px;padding:32px;display:grid;gap:8px;justify-items:start"><span aria-hidden="true" style="color:#A1A1AA">○</span><strong style="font-weight:600">Your workspace is ready.</strong><span style="font-size:13px;color:#A1A1AA">Tasks appear after kickoff. Start by completing the onboarding checklist.</span><a href="#" style="font-size:13px;font-weight:600">Open onboarding checklist</a></div>
+        </sc-if>
+
+        <sc-if value="{{ showItems }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start">
+            <div style="flex:2 1 520px;min-width:0;display:grid;gap:16px">
+              <section aria-labelledby="na-h" style="background:#151515;border:2px solid #C9A227;border-radius:32px;padding:28px;display:grid;gap:14px">
+                <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><span style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C9A227">Your next action</span><span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#D98E3A">○ Awaiting you</span></div>
+                <h2 id="na-h" style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:26px;font-weight:500;line-height:1.2">Approve the intake question set</h2>
+                <p style="margin:0;font-size:13px;color:#A1A1AA;max-width:560px">18 questions drafted from your web form and inbox. Approving lets the prototype build continue. You can request changes instead.</p>
+                <dl style="margin:0;display:flex;gap:24px;flex-wrap:wrap;font-size:12px"><div><dt style="color:#A1A1AA">Owner</dt><dd style="margin:0">R. Mensah (you)</dd></div><div><dt style="color:#A1A1AA">Due</dt><dd style="margin:0">Thu 6 Nov 2026</dd></div><div><dt style="color:#A1A1AA">Blocks</dt><dd style="margin:0">Prototype build</dd></div></dl>
+                <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="#" style="min-height:44px;padding:12px 24px;border-radius:9999px;background:#C9A227;color:#080808;font-size:13px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center">Review and approve</a><a href="#" style="min-height:44px;padding:11px 23px;border-radius:9999px;border:1px solid #71717A;color:#FFFFFF;font-size:13px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center">Request changes</a></div>
+              </section>
+
+              <section aria-labelledby="or-h" style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px;display:grid;gap:14px">
+                <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:baseline"><h2 id="or-h" style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:500">Order · Make It Make Sense Kit</h2><span style="font-size:11px;color:#A1A1AA">AMA-ORD-0418 · AMA-SVC-MIMS-001</span></div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:8px;font-size:12px">
+                  <div style="border:1px solid #27272A;border-radius:12px;padding:10px 12px"><div style="color:#A1A1AA">Payment</div><div style="color:#5FB38A;font-weight:600">● Verified · 1 Nov</div></div>
+                  <div style="border:1px dashed #D98E3A;border-radius:12px;padding:10px 12px"><div style="color:#A1A1AA">Intake</div><div style="color:#D98E3A;font-weight:600">○ More information needed</div></div>
+                  <div style="border:1px solid #27272A;border-radius:12px;padding:10px 12px"><div style="color:#A1A1AA">Source units</div><div>4 of 5 estimated · confirmed at review</div></div>
+                  <div style="border:1px solid #27272A;border-radius:12px;padding:10px 12px"><div style="color:#A1A1AA">Delivery date</div><div>Set when inputs are accepted</div></div>
+                </div>
+                <ol aria-label="Intake status" style="list-style:none;margin:0;padding:0;display:flex;gap:4px;flex-wrap:wrap;font-size:11px">
+                  <li style="padding:4px 10px;border-radius:9999px;color:#5FB38A;border:1px solid #27272A">● Submitted</li>
+                  <li style="padding:4px 10px;border-radius:9999px;color:#5FB38A;border:1px solid #27272A">● Under review</li>
+                  <li aria-current="step" style="padding:4px 10px;border-radius:9999px;color:#D98E3A;border:1px solid #D98E3A">○ More information needed</li>
+                  <li style="padding:4px 10px;border-radius:9999px;color:#A1A1AA;border:1px dashed #3F3F46">○ Inputs accepted</li>
+                  <li style="padding:4px 10px;border-radius:9999px;color:#A1A1AA;border:1px dashed #3F3F46">○ In production</li>
+                  <li style="padding:4px 10px;border-radius:9999px;color:#A1A1AA;border:1px dashed #3F3F46">○ In review</li>
+                  <li style="padding:4px 10px;border-radius:9999px;color:#A1A1AA;border:1px dashed #3F3F46">○ Delivered</li>
+                </ol>
+                <div style="border-top:1px solid #27272A;padding-top:12px;display:grid;gap:6px;font-size:12px"><strong style="font-weight:600">Missing before we can accept</strong><ul style="margin:0;padding-left:18px;display:grid;gap:4px"><li>Replace the link that won't open (intake-page.html)</li><li>Confirm the main message in one sentence</li></ul><span style="color:#A1A1AA">The delivery clock starts when inputs are accepted. Owner: you.</span><a href="AMA Components.dc.html" style="font-weight:600">Update your inputs</a></div>
+              </section>
+
+              <section aria-labelledby="t-h" style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+                <div style="display:flex;justify-content:space-between;gap:8px;margin-bottom:8px"><h2 id="t-h" style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:500">Tasks</h2><span style="font-size:12px;color:#A1A1AA">5 open · 4 done</span></div>
+                <ul style="list-style:none;margin:0;padding:0">
+                  <sc-for list="{{ tasks }}" as="t" hint-placeholder-count="5">
+                    <li style="display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:12px;padding:12px 0;border-bottom:1px solid #27272A;font-size:13px;align-items:start"><span aria-hidden="true" style="{{ t.iconStyle }}">{{ t.icon }}</span><div><div>{{ t.title }}</div><div style="font-size:11px;color:#A1A1AA">{{ t.owner }} · {{ t.due }}</div></div><span style="{{ t.statusStyle }}">{{ t.status }}</span></li>
+                  </sc-for>
+                </ul>
+              </section>
+
+              <section aria-labelledby="d-h" style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+                <h2 id="d-h" style="margin:0 0 8px;font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:500">Deliverables</h2>
+                <ul style="list-style:none;margin:0;padding:0">
+                  <li style="display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:12px;padding:12px 0;border-bottom:1px solid #27272A;font-size:13px"><span aria-hidden="true" style="color:#5FB38A">●</span><div>Source and requirements map<div style="font-size:11px;color:#A1A1AA">v1.0 · approved by you 28 Oct</div></div><a href="#" style="font-size:12px">Open</a></li>
+                  <li style="display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:12px;padding:12px 0;border-bottom:1px solid #27272A;font-size:13px"><span aria-hidden="true" style="color:#D98E3A">○</span><div>Intake question set<div style="font-size:11px;color:#A1A1AA">v0.2 · awaiting your approval</div></div><a href="#" style="font-size:12px">Review</a></li>
+                  <li style="display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:12px;padding:12px 0;font-size:13px"><span aria-hidden="true" style="color:#A1A1AA">◇</span><div>Workflow prototype<div style="font-size:11px;color:#A1A1AA">Not started · after approval</div></div><span style="font-size:12px;color:#A1A1AA">—</span></li>
+                </ul>
+              </section>
+            </div>
+
+            <div style="flex:1 1 300px;min-width:0;display:grid;gap:16px">
+              <section aria-labelledby="ap-h" style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+                <h2 id="ap-h" style="margin:0 0 12px;font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:500">Decisions and approvals</h2>
+                <div style="display:grid;gap:10px;font-size:12px">
+                  <div style="padding:12px;border-radius:16px;border:1px dashed #D98E3A"><div style="color:#D98E3A;font-weight:600">○ Pending · you</div><div>Approve intake question set</div></div>
+                  <div style="padding:12px;border-radius:16px;border:1px solid #27272A"><div style="color:#5FB38A;font-weight:600">● Decided · 28 Oct</div><div>Referral letters stay out of scope</div><div style="color:#A1A1AA">R. Mensah with AMA lead</div></div>
+                  <div style="padding:12px;border-radius:16px;border:1px solid #27272A"><div style="color:#5FB38A;font-weight:600">● Approved · 28 Oct</div><div>Requirements map v1.0</div></div>
+                </div>
+              </section>
+              <section aria-labelledby="ev-h" style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+                <h2 id="ev-h" style="margin:0 0 12px;font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:500">Sources and evidence</h2>
+                <ul style="list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:12px">
+                  <li style="display:flex;justify-content:space-between;gap:8px"><span>web-form-export.csv</span><span style="color:#A1A1AA">23 Oct</span></li>
+                  <li style="display:flex;justify-content:space-between;gap:8px"><span>front-desk-faq.pdf</span><span style="color:#A1A1AA">23 Oct</span></li>
+                  <li style="display:flex;justify-content:space-between;gap:8px"><span>Inbox sample (40 msgs)</span><span style="color:#D98E3A">▲ Access ends 3 Nov</span></li>
+                </ul>
+                <a href="#" style="display:inline-block;margin-top:12px;font-size:12px;font-weight:600">Add a source</a>
+              </section>
+              <section aria-labelledby="ac-h" style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+                <h2 id="ac-h" style="margin:0 0 12px;font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:500">Activity</h2>
+                <ol style="list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:12px;color:#A1A1AA">
+                  <li><span style="color:#FFFFFF">AMA lead</span> shared question set v0.2 · 30 Oct</li>
+                  <li><span style="color:#FFFFFF">You</span> approved requirements map · 28 Oct</li>
+                  <li><span style="color:#FFFFFF">You</span> uploaded 2 sources · 23 Oct</li>
+                </ol>
+              </section>
+              <section aria-labelledby="tm-h" style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+                <div style="display:flex;justify-content:space-between;gap:8px;margin-bottom:12px"><h2 id="tm-h" style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:500">Your team</h2><a href="AMA Team and Usage.dc.html" style="font-size:12px">All roles</a></div>
+                <ul style="list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:12px">
+                  <li style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px"><span>Advisory lead<span style="display:block;color:#A1A1AA">Major Dream Williams</span></span><span style="color:#5FB38A">● Active</span></li>
+                  <li style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px"><span>Intake researcher<span style="display:block;color:#A1A1AA">Weekdays 09:00 · you approve</span></span><span style="color:#A1A1AA">◷ Scheduled</span></li>
+                  <li style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px"><span>Draft writer<span style="display:block;color:#A1A1AA">On request · never sends</span></span><span style="color:#E3BB48">◐ Running</span></li>
+                </ul>
+                <p style="margin:10px 0 0;font-size:11px;color:#A1A1AA">Proposed roles. Runs on a schedule, not continuously.</p>
+              </section>
+              <section aria-labelledby="us-h" style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px;display:grid;gap:10px">
+                <div style="display:flex;justify-content:space-between;gap:8px"><h2 id="us-h" style="margin:0;font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:500">Usage allowance</h2><a href="AMA Team and Usage.dc.html" style="font-size:12px">Details</a></div>
+                <div style="display:flex;justify-content:space-between;font-size:12px"><span>98 of 120 tasks</span><span style="color:#D98E3A">▲ 80% reached</span></div>
+                <div role="meter" aria-label="Included tasks used" aria-valuemin="0" aria-valuemax="120" aria-valuenow="98" style="height:8px;border-radius:9999px;background:#242424;overflow:hidden"><div style="width:82%;height:100%;background:#D98E3A;border-radius:9999px"></div></div>
+                <span style="font-size:11px;color:#A1A1AA">Resets 1 Dec. Pauses and asks you when used up. Auto-recharge off. Illustrative.</span>
+              </section>
+              <section aria-labelledby="ho-h" style="background:#151515;border:1px solid #27272A;border-radius:32px;padding:24px">
+                <h2 id="ho-h" style="margin:0 0 12px;font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:500">Handover</h2>
+                <ul style="list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:12px">
+                  <li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#5FB38A">●</span>Owner access transferred to Halden</li>
+                  <li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#E3BB48">◐</span>Operating instructions drafted</li>
+                  <li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#A1A1AA">○</span>Notifications and support routes confirmed</li>
+                  <li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#A1A1AA">○</span>Known issues list reviewed with you</li>
+                </ul>
+                <p style="margin:10px 0 0;font-size:11px;color:#A1A1AA">Target: week 6. Delivery is accepted only when you sign off.</p>
+              </section>
+              <section aria-labelledby="su-h" style="background:#1C1C1C;border:1px solid #27272A;border-radius:32px;padding:24px;font-size:12px;display:grid;gap:6px">
+                <h2 id="su-h" style="margin:0 0 6px;font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:500">Access and support</h2>
+                <span><span style="color:#A1A1AA">Your AMA lead</span> · [Name], replies within [confirm] working days</span>
+                <span><span style="color:#A1A1AA">People with access</span> · 3 (2 Halden, 1 AMA)</span>
+                <a href="#" style="font-weight:600">Manage access</a>
+              </section>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+      <div style="padding:24px;border-top:1px solid #27272A;font-size:11px;color:#A1A1AA;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><span>AMA Solutions Corporation (legal name to verify) · amasolagi.com</span><span>Fictional data. No live records or private client content.</span></div>
+    </div>
+  </sc-if>
+  </div>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { app: 'catalogue', view: 'desktop', data: 'populated', filter: 'All' };
+  pill(on) {
+    return { minHeight: 36, padding: '6px 14px', borderRadius: 9999, fontSize: 12, letterSpacing: '0.04em', cursor: 'pointer',
+      border: on ? '1px solid rgba(201,162,39,0.4)' : '1px solid #3F3F46', background: on ? 'rgba(201,162,39,0.12)' : 'transparent', color: on ? '#E3BB48' : '#A1A1AA', fontWeight: on ? 600 : 400 };
+  }
+  renderVals() {
+    const s = this.state;
+    const tabs = (key, opts) => opts.map(([v, label]) => ({ label, on: s[key] === v, pick: () => this.setState({ [key]: v }), style: this.pill(s[key] === v) }));
+    const usd = n => '$' + n.toLocaleString('en-US');
+    const STD = 'Standard: 1 consolidated revision within 7 days';
+    const O = [
+      ['Walk In Ready',250,'Business owners, consultants and dealmakers preparing for an important meeting.','Two-page meeting brief, ten priority questions, short audio briefing','Meeting purpose, participants, desired outcome; up to 3 source units','3 business days · PDF + audio',STD,1],
+      ['Make It Make Sense Kit',495,'Founders and practitioners whose offer, process or idea takes too much explaining.','Explainer video (4–7 min target), ten-question FAQ, one-page plain-language explanation','Up to 5 source units, audience, main message, approved terms and claims','3 business days · video + PDF',STD+' across the kit',1],
+      ['Customer Question Kit',395,'Sales and service teams answering the same customer questions repeatedly.','Twenty FAQs, ten objection responses, topic map','Up to 5 source units of real questions, product info and approved answers','3 business days · PDF + editable answers',STD+'; unanswerable questions flagged',1],
+      ['Find the Friction',595,'Founders investigating a customer problem before investing further.','Pain-point evidence table, customer language, problem hypotheses, interview questions','Defined audience and problem area; review covers up to 15 source units','5 business days · PDF + editable table',STD+'; interviews and demand validation separate'],
+      ['Find Your Opening',795,'Business owners seeking a clearer position in a crowded market.','Up to 3 competitors compared, dated feature and pricing evidence, gap analysis, positioning hypotheses','Your offer, target customer, competitors; up to 10 source units incl. research','5 business days · PDF + comparison table',STD+'; findings dated to review'],
+      ['Idea to MVP Brief',995,'Founders who need a focused specification before hiring an engineer or starting a build.','Audience and problem brief, prioritized MVP requirements, up to 3 user journeys, acceptance criteria, developer handover prompt','Up to 8 source units, intended user, outcome, constraints, sketches','5 business days · PDF + editable brief',STD+'; development separate'],
+      ['RFP Response Starter',895,'B2B businesses preparing an initial response to one request for proposal.','Requirements matrix, sourced drafts for up to 40 questions, missing-information register','One RFP plus company and product documents; up to 8 source units','5 business days · editable response + table',STD+'; your team approves and submits'],
+      ['Policy Gap Review',795,'Operations teams comparing a vendor document with internal requirements.','Comparison of one vendor document against one policy pack, up to 15 requirements, referenced passages, discrepancies, reviewer questions','Vendor document, internal policies, priority requirements; up to 8 source units','5 business days · PDF + matrix',STD+'; qualified reviewers decide'],
+      ['Project Clarity Brief',395,'Project leads reconciling scattered notes and conflicting updates.','Consolidated brief: decisions, actions, blockers, contradictions, open questions','Up to 5 source units from one project, intended outcome, decision-maker','3 business days · PDF + action register',STD],
+      ['First Week Ready',795,'Managers onboarding someone into one defined role.','Role guide, orientation video, knowledge check (15-question target)','Up to 8 source units: procedures, expectations, exceptions, escalation contacts','5 business days · PDF + video + quiz',STD+'; process owner approves'],
+      ['Vendor Choice Brief',895,'Business owners choosing between a few vendors or tools.','Up to 3 vendors against 8 agreed criteria, evidence table, conditional recommendation, missing-evidence register','Requirements, budget, constraints, proposals; up to 10 source units','5 business days · PDF + comparison table',STD+'; procurement separate'],
+      ['Voice of Customer Brief',795,'Teams with customer feedback that needs to inform a practical decision.','Themes report, source-linked quote and evidence table, concept infographic','Up to 8 source units of de-identified feedback, plus your question','5 business days · PDF + table + infographic',STD+'; sample limits stated']
+    ];
+    const M = [
+      ['Explain It Monthly',1250,'Businesses regularly explaining offers, services or complex topics.','3 explainer kits / month: video, ten-question FAQ, one-page explanation','3 prioritized topics; up to 5 source units each (15/month)','3 business days per kit','3 kits, one active at a time'],
+      ['Executive Listening Desk',995,'Busy leaders who prefer to absorb important material through audio.','4 listening briefs / month: audio + one-page takeaways and questions','Prioritized reading pack; up to 3 source units each (12/month)','4 agreed slots; inputs 3 business days before each','4 briefs, one active at a time'],
+      ['Team Learning Monthly',1750,'Managers whose teams need recurring explanations of procedures or changes.','2 learning modules / month: guide, orientation video, knowledge check','Approved procedures, objectives, process owner; up to 6 source units each (12/month)','5 business days per module','2 modules, one active at a time'],
+      ['Customer Education Monthly',2250,'Businesses needing several coordinated formats on one customer topic.','2 topic bundles / month: video, infographic, 8–12-slide PDF, FAQ','Topic info, audience, brand assets; up to 8 source units each (16/month)','5 business days per bundle','2 bundles, one active at a time'],
+      ['Decision Desk Monthly',2500,'Leaders making recurring decisions that need documented evidence and tradeoffs.','2 decision briefs / month: evidence table, recommendation report, critique-style audio; up to 3 options each','Decision question, criteria, constraints; up to 10 source units each (20/month)','5 business days per brief','2 briefs, one active at a time'],
+      ['Knowledge Continuity Monthly',1500,'Teams maintaining an evolving body of knowledge.','Private knowledge collection, 2 refresh batches / month, change report, updated FAQ, audio summary','Authoritative documents, content owner, change record; up to 10 source units / month incl. month-one setup ◇','5 business days per accepted batch','1 collection, 2 batches, one active at a time']
+    ];
+    const MX = {"Explain It Monthly":["1 revision per kit","Live consulting"],"Executive Listening Desk":["1 revision per brief","Continuous news monitoring"],"Team Learning Monthly":["1 revision per module; process owner signs off","—"],"Customer Education Monthly":["1 revision per bundle","Publishing, paid ads, channel management"],"Decision Desk Monthly":["1 revision per brief; states assumptions and reconsideration conditions","—"],"Knowledge Continuity Monthly":["1 revision per batch; conflicts flagged to content owner; monthly summary with 2nd refresh","Continuous monitoring, unlimited uploads"]};
+    const all = [
+      ...O.map(([name, p, who, gets, brings, delivery, support, entry]) => ({ type: 'One-time', kind: 'One-time service', status: entry ? 'Entry offer · ▲ Availability to confirm' : '▲ Availability to confirm', name, outcome: who, rows: [{ k: 'You get', v: gets }, { k: 'You bring', v: brings }, { k: 'Delivery', v: delivery }, { k: 'Support', v: support }], price: usd(p), priceNote: 'One-time · USD', cta: 'Read details' })),
+      ...M.map(([name, p, who, gets, brings, delivery, limit]) => ({ type: 'Monthly', kind: 'Monthly package', status: '▲ Availability to confirm', name, outcome: who, rows: [{ k: 'You get', v: gets }, { k: 'You bring', v: brings }, { k: 'Delivery', v: delivery + ' ◇ proposed target' }, { k: 'Support', v: MX[name][0] }, ...(MX[name][1] !== '—' ? [{ k: 'Not included', v: MX[name][1] }] : []), { k: 'Limit', v: limit }, { k: 'Renewal', v: 'Monthly, cancel before renewal; unused allowance expires' }], price: usd(p) + ' / mo', priceNote: 'Prepaid monthly · USD', cta: 'Read details' })),
+      { type: 'Consulting', kind: 'Consulting · 60 min', status: 'Entry offer · ▲ Availability to confirm', name: 'AI Choice Session', outcome: 'Sixty minutes on one business question, with preparation and a one-page next-step note.', rows: [{ k: 'With', v: 'Major Dream Williams' }, { k: 'You get', v: 'Session + one-page next-step note' }, { k: 'Booking', v: 'After purchase; not yet connected' }], price: '$350', priceNote: 'One-time · USD', cta: 'Start an inquiry' },
+      { type: 'Consulting', kind: 'Consulting · 90 min', status: '▲ Availability to confirm', name: 'Map → Poke → Scale → Pressure-Proof Workshop', outcome: 'Ninety minutes on one workflow: decision map, assumptions register and a staged pilot plan.', rows: [{ k: 'With', v: 'Major Dream Williams' }, { k: 'You get', v: 'Decision map, assumptions register, pilot plan' }, { k: 'Booking', v: 'After purchase; not yet connected' }], price: '$1,250', priceNote: 'One-time · USD', cta: 'Start an inquiry' },
+      { type: 'Implementation', kind: 'Implementation', status: '◐ Quoted per client', name: 'Separate implementation', outcome: 'A separate accepted proposal defines responsibilities, milestones and support. Not bundled into advisory prices.', rows: [{ k: 'Starts', v: 'After a paid analysis' }, { k: 'Pricing', v: 'Quoted after analysis' }, { k: 'Handover', v: 'Usable, client-owned' }], price: 'Quoted', priceNote: 'No fixed-price SKU', cta: 'Start an inquiry' }
+    ];
+    const SKU = {"Walk In Ready":"AMA-SVC-WIR-001","Make It Make Sense Kit":"AMA-SVC-MIMS-001","Customer Question Kit":"AMA-SVC-CQK-001","Find the Friction":"AMA-SVC-FTF-001","Find Your Opening":"AMA-SVC-FYO-001","Idea to MVP Brief":"AMA-SVC-ITM-001","RFP Response Starter":"AMA-SVC-RFP-001","Policy Gap Review":"AMA-SVC-PGR-001","Project Clarity Brief":"AMA-SVC-PCB-001","First Week Ready":"AMA-SVC-FWR-001","Vendor Choice Brief":"AMA-SVC-VCB-001","Voice of Customer Brief":"AMA-SVC-VOC-001","Explain It Monthly":"AMA-SUB-EIM-001","Executive Listening Desk":"AMA-SUB-ELD-001","Team Learning Monthly":"AMA-SUB-TLM-001","Customer Education Monthly":"AMA-SUB-CEM-001","Decision Desk Monthly":"AMA-SUB-DDM-001","Knowledge Continuity Monthly":"AMA-SUB-KCM-001","AI Choice Session":"AMA-CNS-AIC-001","Map → Poke → Scale → Pressure-Proof Workshop":"AMA-CNS-MPS-001"};
+    const VIDEO = ['Make It Make Sense Kit', 'First Week Ready', 'Explain It Monthly', 'Team Learning Monthly', 'Customer Education Monthly'];
+    const STAGE = {};
+    ['Walk In Ready', 'Make It Make Sense Kit', 'Customer Question Kit', 'AI Choice Session'].forEach(n => STAGE[n] = '● Launch candidate · checkout pending');
+    ['Find the Friction', 'Find Your Opening', 'Idea to MVP Brief', 'RFP Response Starter', 'Policy Gap Review', 'Project Clarity Brief', 'First Week Ready', 'Vendor Choice Brief', 'Voice of Customer Brief', 'Executive Listening Desk', 'Team Learning Monthly', 'Knowledge Continuity Monthly', 'Map → Poke → Scale → Pressure-Proof Workshop'].forEach(n => STAGE[n] = '◐ Limited pilot · inquiry only');
+    STAGE['Explain It Monthly'] = '○ Waitlist · after single-kit pilot';
+    STAGE['Customer Education Monthly'] = '◇ Planned';
+    STAGE['Decision Desk Monthly'] = '◇ Planned';
+    all.forEach(i => {
+      if (SKU[i.name]) i.rows = [...i.rows, { k: 'SKU', v: SKU[i.name] }];
+      if (i.type !== 'Implementation') i.status = (i.status.startsWith('Entry offer') ? 'Entry offer · ' : '') + (STAGE[i.name] || '▲ Release stage to confirm');
+      if (VIDEO.includes(i.name)) i.status = 'Video validation required · ' + i.status;
+      if (i.type !== 'Implementation') i.cta = STAGE[i.name] && STAGE[i.name].includes('Launch') ? 'Read details' : STAGE[i.name] && STAGE[i.name].includes('Limited pilot') ? 'Ask about the pilot' : STAGE[i.name] && STAGE[i.name].includes('Waitlist') ? 'Join the waitlist' : 'Read details';
+    });
+    const cats = ['All', 'One-time', 'Monthly', 'Consulting', 'Implementation'];
+    const list = s.filter === 'All' ? all : all.filter(i => i.type === s.filter);
+    const items = list.map(i => ({ ...i, isBundle: !!i.isBundle,
+      cardStyle: { background: '#151515', border: i.isBundle ? '1px solid #8A6D1A' : '1px solid #27272A', borderRadius: 32, padding: 24, display: 'flex', flexDirection: 'column', gap: 16 },
+      ctaStyle: { minHeight: 44, padding: '11px 20px', borderRadius: 9999, border: '1px solid #71717A', color: '#FFFFFF', fontSize: 12, fontWeight: 600, letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none', display: 'inline-flex', alignItems: 'center' } }));
+    const tasks = [
+      ['Approve intake question set', 'You', 'Due 6 Nov', 'Awaiting you', 'wait'],
+      ['Draft prototype screens', 'AMA lead', 'Due 10 Nov', 'In progress', 'prog'],
+      ['Renew inbox sample access', 'You', 'Due 3 Nov', 'Blocked soon', 'warn'],
+      ['Book front-desk review', 'You', 'Week 5', 'Not started', 'todo'],
+      ['Requirements map', 'AMA lead', '28 Oct', 'Complete', 'done']
+    ].map(([title, owner, due, status, k]) => {
+      const m = { wait: ['○', '#D98E3A'], prog: ['◐', '#E3BB48'], warn: ['▲', '#D98E3A'], todo: ['◇', '#A1A1AA'], done: ['●', '#5FB38A'] }[k];
+      return { title, owner, due, status, icon: m[0], iconStyle: { color: m[1] }, statusStyle: { fontSize: 11, color: m[1], whiteSpace: 'nowrap' } };
+    });
+    const phone = s.view === 'phone';
+    return {
+      appTabs: tabs('app', [['catalogue', 'A · Catalogue'], ['proposal', 'B · Proposal'], ['workspace', 'C · Workspace']]),
+      viewTabs: tabs('view', [['desktop', 'Desktop'], ['phone', 'Phone 390']]),
+      stateTabs: tabs('data', [['populated', 'Populated'], ['loading', 'Loading'], ['empty', 'Empty'], ['error', 'Error']]),
+      frameStyle: phone ? { width: 390, maxWidth: '100%', border: '1px solid #3F3F46', borderRadius: 32, overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.4)' } : { width: '100%', maxWidth: 1280, border: '1px solid #27272A', borderRadius: 16, overflow: 'hidden' },
+      isCatalogue: s.app === 'catalogue', isProposal: s.app === 'proposal', isWorkspace: s.app === 'workspace',
+      isDesktop: !phone, isPhone: phone,
+      showLoading: s.data === 'loading', showError: s.data === 'error',
+      showEmptyCat: s.data === 'empty', showEmptyWs: s.data === 'empty', showItems: s.data === 'populated',
+      toPopulated: () => this.setState({ data: 'populated' }),
+      three: [1, 2, 3],
+      filters: cats.map(c => ({ label: c, count: c === 'All' ? all.length : all.filter(i => i.type === c).length, on: s.filter === c, pick: () => this.setState({ filter: c }), style: { ...this.pill(s.filter === c), minHeight: 44 } })),
+      resultText: s.data === 'populated' ? `Showing ${list.length} of ${all.length} · ${s.filter}` : '',
+      items, tasks
+    };
+  }
+}
+</script>
+</body>
+</html>
