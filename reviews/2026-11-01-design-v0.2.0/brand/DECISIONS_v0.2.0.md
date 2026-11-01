@@ -25,7 +25,8 @@ Approved by Major Dream Williams, 31 Oct 2026, in Claude Design session. Level: 
 10. Journey copy keeps inquiry, acceptance, payment and booking as separate events.
 
 ## Confirmed 1 Nov 2026
-- Naming: public name everywhere people see it is **AMA SOL AGI** (all caps, matches amasolagi.com; "Art Mob Agents Solutions AGI"). Legal and billing name is **AMA Solutions Corporation**. Replaces "AMA Solutions" / "AMA Solutions Inc." in all pages. Logo artwork unchanged.
+- Founder visual approval of overall design direction, Major Dream Williams, 1 Nov 2026 ("it looks good"). Covers visual design only. Proposed terms, logo variants and operational readiness keep their existing review states.
+- Naming: public name everywhere people see it is **AMA SOL AGI** (all caps, matches amasolagi.com; "Art Mob Agents Solutions AGI"). Legal and billing name remains **unverified pending incorporation-document review**; AMA Solutions Corporation is not approved for billing. Public naming replaces "AMA Solutions" / "AMA Solutions Inc." in all pages. Logo artwork unchanged.
 - AI Choice Session: $350 for 60 minutes is final (Major Dream Williams).
 
 ## Unresolved

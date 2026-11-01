@@ -1,5 +1,5 @@
 # Open items · 1 Nov 2026 (rev 2)
-Design checkpoint complete. Founder approval and launch readiness are separate.
+Design checkpoint complete. Visual direction approved by founder 1 Nov 2026 (AMA-0138). Terms, logo variants and launch readiness remain in review. PR #2 stays unmerged until final export sync, walkthrough and phone checks.
 
 ## Built, awaiting founder approval (in_review)
 - AMA-0135 Front door
@@ -18,7 +18,7 @@ Design checkpoint complete. Founder approval and launch readiness are separate.
 - Legal name: verify "AMA Solutions Corporation" against incorporation documents
 - Worker→Mob assignments shown as provisional; accountable human recorded per worker (Major Dream Williams); leader backstories
 - Video capacity: production run for 5 video offers
-- Release stages applied (launch candidate 4, limited pilot 13, waitlist 1, planned 2). Decision Desk Monthly is Planned; purchase remains closed.
+- Release stages applied (launch candidate 4, limited pilot 13, waitlist 1, planned 2). Decision Desk Monthly set to Planned (1 Nov).
 - Video validation required for 5 offers before enabling
 
 ## Outside this project
@@ -26,7 +26,7 @@ Design checkpoint complete. Founder approval and launch readiness are separate.
 - Stripe (account …4PGj): set support email and URL after publishing; test terms checkbox
 - info@amasolagi.com inbound delivery and monitoring
 - Checkout, booking and payment integrations
-- GitHub review checkpoint prepared by the main agent; see repository draft PR.
+- Draft PR #2 open (MajorDream444/AMASOLAGI-brand-design-system, commit 9b34e77). Visual and end-to-end review pending. Do not merge until founder approval.
 
 ## Logos and brand assets (unchanged, in_review)
 - Transparent cut-outs (cream fringe), v002 redraw (rejected), compact, one-colour, stacked, dark-ground wordmark

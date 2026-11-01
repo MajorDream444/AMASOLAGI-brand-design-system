@@ -56,3 +56,7 @@ Date: 31 Oct 2026 · Status: approved for continued design (Major Dream Williams
 - Intake journey in onboarding (live, derived from checklist) and workspace (order panel).
 - Consulting cancellation draft (not active).
 - Mob assignments marked provisional; "Accountable human" replaces "Support owner".
+
+## 1 Nov 2026 · final export
+- Founder visual approval of overall design direction, Major Dream Williams, 1 Nov 2026 ("it looks good"). Covers visual design only.
+- Compared with 9b34e77: all seven HTML pages and binary assets unchanged. Waitlist CTA and Decision Desk Planned already present. Approval and handoff records updated.
